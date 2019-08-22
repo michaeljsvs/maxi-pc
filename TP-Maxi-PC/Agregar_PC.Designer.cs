@@ -84,23 +84,26 @@
             this.txt_Modelo.MaxLength = 32;
             this.txt_Modelo.Name = "txt_Modelo";
             this.txt_Modelo.Size = new System.Drawing.Size(174, 20);
-            this.txt_Modelo.TabIndex = 2;
+            this.txt_Modelo.TabIndex = 0;
             // 
             // combo_Marca
             // 
+            this.combo_Marca.AllowDrop = true;
+            this.combo_Marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_Marca.FormattingEnabled = true;
             this.combo_Marca.Location = new System.Drawing.Point(63, 55);
             this.combo_Marca.Name = "combo_Marca";
             this.combo_Marca.Size = new System.Drawing.Size(121, 21);
-            this.combo_Marca.TabIndex = 3;
+            this.combo_Marca.TabIndex = 1;
             // 
             // combo_Dueño
             // 
+            this.combo_Dueño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_Dueño.FormattingEnabled = true;
             this.combo_Dueño.Location = new System.Drawing.Point(63, 82);
             this.combo_Dueño.Name = "combo_Dueño";
             this.combo_Dueño.Size = new System.Drawing.Size(121, 21);
-            this.combo_Dueño.TabIndex = 3;
+            this.combo_Dueño.TabIndex = 2;
             // 
             // lbl_Marca
             // 
@@ -126,24 +129,24 @@
             this.dgv_PC.Location = new System.Drawing.Point(15, 131);
             this.dgv_PC.Name = "dgv_PC";
             this.dgv_PC.Size = new System.Drawing.Size(367, 150);
-            this.dgv_PC.TabIndex = 4;
+            this.dgv_PC.TabIndex = 5;
             // 
             // btn_Cargar
             // 
-            this.btn_Cargar.Location = new System.Drawing.Point(305, 80);
+            this.btn_Cargar.Location = new System.Drawing.Point(215, 80);
             this.btn_Cargar.Name = "btn_Cargar";
             this.btn_Cargar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cargar.TabIndex = 5;
+            this.btn_Cargar.TabIndex = 3;
             this.btn_Cargar.Text = "Cargar";
             this.btn_Cargar.UseVisualStyleBackColor = true;
             this.btn_Cargar.Click += new System.EventHandler(this.btn_Cargar_Click);
             // 
             // btn_Salir
             // 
-            this.btn_Salir.Location = new System.Drawing.Point(224, 80);
+            this.btn_Salir.Location = new System.Drawing.Point(307, 80);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(75, 23);
-            this.btn_Salir.TabIndex = 5;
+            this.btn_Salir.TabIndex = 4;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = true;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);

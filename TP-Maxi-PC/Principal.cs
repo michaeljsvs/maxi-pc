@@ -41,5 +41,17 @@ namespace TP_Maxi_PC
             Agregar_PC nuevo = new Agregar_PC();
             nuevo.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Agregar_Cliente nuevo = new Agregar_Cliente();
+            nuevo.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Agregar_PC nuevo = new Agregar_PC();
+            nuevo.Show();
+        }
     }
 }
