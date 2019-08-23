@@ -33,3 +33,15 @@ C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc repo\TP-Maxi-PC\obj\Debu
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc repo\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc repo\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc repo\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe.config
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.pdb
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csprojAssemblyReference.cache
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_Cliente.resources
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_PC.resources
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Principal.resources
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Properties.Resources.resources
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.GenerateResource.cache
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
+D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb

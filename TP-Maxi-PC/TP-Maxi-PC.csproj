@@ -46,18 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agregar_Cliente.cs">
+    <Compile Include="ABM\Agregar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregar_Cliente.Designer.cs">
+    <Compile Include="ABM\Agregar_Cliente.Designer.cs">
       <DependentUpon>Agregar_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Agregar_PC.cs">
+    <Compile Include="ABM\Agregar_PC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregar_PC.Designer.cs">
+    <Compile Include="ABM\Agregar_PC.Designer.cs">
       <DependentUpon>Agregar_PC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\acceso_BD.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,10 +67,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Agregar_Cliente.resx">
+    <Compile Include="Repositorios\ClientesRepositorio.cs" />
+    <EmbeddedResource Include="ABM\Agregar_Cliente.resx">
       <DependentUpon>Agregar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Agregar_PC.resx">
+    <EmbeddedResource Include="ABM\Agregar_PC.resx">
       <DependentUpon>Agregar_PC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">

@@ -52,6 +52,17 @@
             this.txtNroCalle = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtFechaIng = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroCaller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idBarrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,9 +155,20 @@
             // dgv_Clientes
             // 
             this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Clientes.Location = new System.Drawing.Point(14, 156);
+            this.dgv_Clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCliente,
+            this.tipoDocumento,
+            this.nroDocumento,
+            this.apellido,
+            this.nombre,
+            this.sexo,
+            this.fechaIngreso,
+            this.calle,
+            this.nroCaller,
+            this.idBarrio});
+            this.dgv_Clientes.Location = new System.Drawing.Point(12, 156);
             this.dgv_Clientes.Name = "dgv_Clientes";
-            this.dgv_Clientes.Size = new System.Drawing.Size(563, 150);
+            this.dgv_Clientes.Size = new System.Drawing.Size(864, 150);
             this.dgv_Clientes.TabIndex = 19;
             this.dgv_Clientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Clientes_CellContentClick);
             // 
@@ -267,11 +289,72 @@
             this.txtFechaIng.Size = new System.Drawing.Size(110, 20);
             this.txtFechaIng.TabIndex = 5;
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(12, 312);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(123, 23);
+            this.btnActualizar.TabIndex = 24;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // idCliente
+            // 
+            this.idCliente.HeaderText = "ID";
+            this.idCliente.Name = "idCliente";
+            // 
+            // tipoDocumento
+            // 
+            this.tipoDocumento.HeaderText = "Tipo Documento";
+            this.tipoDocumento.Name = "tipoDocumento";
+            // 
+            // nroDocumento
+            // 
+            this.nroDocumento.HeaderText = "Documento";
+            this.nroDocumento.Name = "nroDocumento";
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // sexo
+            // 
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            // 
+            // fechaIngreso
+            // 
+            this.fechaIngreso.HeaderText = "Fecha Ingreso";
+            this.fechaIngreso.Name = "fechaIngreso";
+            // 
+            // calle
+            // 
+            this.calle.HeaderText = "Calle";
+            this.calle.Name = "calle";
+            // 
+            // nroCaller
+            // 
+            this.nroCaller.HeaderText = "Numero Calle";
+            this.nroCaller.Name = "nroCaller";
+            // 
+            // idBarrio
+            // 
+            this.idBarrio.HeaderText = "Barrio";
+            this.idBarrio.Name = "idBarrio";
+            // 
             // Agregar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 372);
+            this.ClientSize = new System.Drawing.Size(888, 372);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtFechaIng);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNroCalle);
@@ -331,5 +414,16 @@
         private System.Windows.Forms.TextBox txtNroCalle;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtFechaIng;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaIngreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroCaller;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idBarrio;
     }
 }
