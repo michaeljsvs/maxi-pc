@@ -41,6 +41,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -83,23 +84,24 @@
             // 
             this.pCToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
-            this.modificarToolStripMenuItem});
+            this.modificarToolStripMenuItem,
+            this.consultarToolStripMenuItem});
             this.pCToolStripMenuItem.Name = "pCToolStripMenuItem";
-            this.pCToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
+            this.pCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pCToolStripMenuItem.Text = "PC";
             this.pCToolStripMenuItem.Click += new System.EventHandler(this.pCToolStripMenuItem_Click);
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // label1
@@ -152,6 +154,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "PC";
             // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem.Text = "Consultar";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +195,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
     }
 }
 

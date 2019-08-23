@@ -25,14 +25,31 @@ namespace TP_Maxi_PC
             listaBarrio.Add("Nueva Cordoba");
             listaBarrio.Add("General Paz");
             listaBarrio.Add("Pueyrredón");
-            combo_Barrio.DataSource = listaBarrio;
-            combo_Barrio.SelectedIndex = 0;
+            cmbBarrio.DataSource = listaBarrio;
+            cmbBarrio.SelectedIndex = 0;
+
+            ArrayList listaTipoDoc = new ArrayList();
+            listaTipoDoc.Add("DNI");
+            listaTipoDoc.Add("PAS");
+            cmbTipoDoc.DataSource = listaTipoDoc;
+            cmbTipoDoc.SelectedIndex = 0;
+
+            ArrayList listaSexo = new ArrayList();
+            listaSexo.Add("Masculino");
+            listaSexo.Add("Femenino");
+            listaSexo.Add("Otro");
+            cmbSexo.DataSource = listaSexo;
+            cmbSexo.SelectedIndex = 0;
 
             dgv_Clientes.Columns.Add("clApellido","Apellido");
             dgv_Clientes.Columns.Add("clNombre", "Nombre");
             dgv_Clientes.Columns.Add("clDoc", "Documento");
+            dgv_Clientes.Columns.Add("clTipoDoc", "Tipo Documento");
+            dgv_Clientes.Columns.Add("clSexo", "Sexo");
+            dgv_Clientes.Columns.Add("clFecIng", "Fecha Ingreso");
             dgv_Clientes.Columns.Add("clBarrio", "Barrio");
             dgv_Clientes.Columns.Add("clCalle", "Calle");
+            dgv_Clientes.Columns.Add("clNroCal", "Nro Calle");
 
         }
 
@@ -69,10 +86,10 @@ namespace TP_Maxi_PC
                     }
                     else
                     {
-                        if (combo_Barrio.SelectedIndex == -1)
+                        if (cmbBarrio.SelectedIndex == -1)
                         {
                             MessageBox.Show("El Barrio debe estar seleccionado!");
-                            combo_Barrio.Focus();
+                            cmbBarrio.Focus();
                         }
                         else
                         {
@@ -83,18 +100,28 @@ namespace TP_Maxi_PC
                             }
                             else
                             {
-                                dgv_Clientes.Rows.Add(txtApe.Text.ToString(),txtNombre.Text.ToString(),txtDoc.Text.ToString(),combo_Barrio.SelectedValue.ToString(),txtCalle.Text.ToString());
+                                dgv_Clientes.Rows.Add(txtApe.Text.ToString(),txtNombre.Text.ToString(),txtDoc.Text.ToString(), cmbTipoDoc.SelectedValue.ToString(), cmbSexo.SelectedValue.ToString(), 
+                                    txtFechaIng.Text.ToString(), cmbBarrio.SelectedValue.ToString(),txtCalle.Text.ToString(),txtNroCalle.Text.ToString());
                                 txtNombre.Clear();
                                 txtApe.Clear();
                                 txtDoc.Clear();
+                                cmbTipoDoc.SelectedIndex = 0;
+                                cmbSexo.SelectedIndex = 0;
                                 txtCalle.Clear();
-                                combo_Barrio.SelectedIndex = 0;
-                                txtApe.Focus();
+                                txtFechaIng.Clear();
+                                cmbBarrio.SelectedIndex = 0;
+                                txtNroCalle.Clear();
+                                txtNombre.Focus();
                             }
                         }
                     }
                 }
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
