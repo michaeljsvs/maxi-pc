@@ -45,3 +45,15 @@ D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.GenerateResou
 D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
 D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
 D:\Repo\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe.config
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.pdb
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csprojAssemblyReference.cache
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_Cliente.resources
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_PC.resources
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Principal.resources
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Properties.Resources.resources
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.GenerateResource.cache
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb

@@ -20,7 +20,7 @@ namespace TP_Maxi_PC.Repositorios
 
         public DataTable obtenerClientesDT()
         {
-            string sql = "SELECT * FROM Clientes";
+            string sql = "SELECT C.idCliente,T.nombre,C.nroDocumento,C.apellido,C.nombre,C.sexo,C.fechaIngreso,C.calle,C.nroCalle,B.nombre FROM Clientes C JOIN tiposDocumento T ON T.idTipoDocumento = C.tipoDocumento JOIN Barrios B ON B.idBarrio = C.idBarrio";
 
             return BD.consulta(sql);
         }
@@ -29,6 +29,23 @@ namespace TP_Maxi_PC.Repositorios
         {
             string sql = "SELECT * FROM Barrios";
             return BD.consulta(sql);
+        }
+
+        public DataTable obtenerDniDT()
+        {
+            string sql = "SELECT * FROM TiposDocumento";
+            return BD.consulta(sql);
+        }
+        public bool insertarCliente(string nombre,string apellido,char sexo, DateTime fechaIngreso,string calle, String nroCalle,int idBarrio,int tipoDoc,int dni)
+        {
+            string sql = $"INSERT [dbo].[Clientes] ([tipoDocumento],[nroDocumento],[nombre],[apellido],[sexo],[fechaIngreso],[calle],[nroCalle],[idBarrio])" +
+                    $" VALUES ('{tipoDoc +1}','{dni}','{nombre}','{apellido}','{sexo}','{fechaIngreso.ToString("yyyy-MM-dd")}','{calle}','{nroCalle}','{idBarrio}')";
+            return BD.EjecutarSQL(sql);
+        }
+        public void borrarCliente(String id)
+        {
+            string sql = "DELETE [dbo].[Clientes] WHERE idCliente = " + id;
+             BD.EjecutarSQL(sql);
         }
     }
 }

@@ -49,6 +49,13 @@ namespace TP_Maxi_PC
                 
             }
         }
+        private void ActualizarComboDni()
+        {
+            var tipos = clientesRepositorio.obtenerDniDT();
+            cmbTipoDoc.ValueMember = "idTipoDocumento";
+            cmbTipoDoc.DisplayMember = "nombre";
+            cmbTipoDoc.DataSource = tipos;
+        }
         private void ActualizarComboBarrio()
         {
             var barrios = clientesRepositorio.obtenerBarriosDT();
@@ -60,6 +67,7 @@ namespace TP_Maxi_PC
         {
             ActualizarClientes();
             ActualizarComboBarrio();
+            ActualizarComboDni();
             //ArrayList listaBarrio = new ArrayList();
             //listaBarrio.Add("Centro");
             //listaBarrio.Add("Nueva Cordoba");
@@ -74,12 +82,12 @@ namespace TP_Maxi_PC
             //cmbTipoDoc.DataSource = listaTipoDoc;
             //cmbTipoDoc.SelectedIndex = 0;
 
-            //ArrayList listaSexo = new ArrayList();
-            //listaSexo.Add("Masculino");
-            //listaSexo.Add("Femenino");
-            //listaSexo.Add("Otro");
-            //cmbSexo.DataSource = listaSexo;
-            //cmbSexo.SelectedIndex = 0;
+            ArrayList listaSexo = new ArrayList();
+            listaSexo.Add("M");
+            listaSexo.Add("F");
+            listaSexo.Add("X");
+            cmbSexo.DataSource = listaSexo;
+            cmbSexo.SelectedIndex = 0;
 
             //dgv_Clientes.Columns.Add("clApellido","Apellido");
             //dgv_Clientes.Columns.Add("clNombre", "Nombre");
@@ -140,17 +148,20 @@ namespace TP_Maxi_PC
                             }
                             else
                             {
-                                dgv_Clientes.Rows.Add(txtApe.Text.ToString(),txtNombre.Text.ToString(),txtDoc.Text.ToString(), cmbTipoDoc.SelectedValue.ToString(), cmbSexo.SelectedValue.ToString(), 
-                                    txtFechaIng.Text.ToString(), cmbBarrio.SelectedValue.ToString(),txtCalle.Text.ToString(),txtNroCalle.Text.ToString());
+                                clientesRepositorio.insertarCliente(txtNombre.Text,txtApe.Text,char.Parse(cmbSexo.SelectedValue.ToString()),dateTimePicker1.Value,txtCalle.Text,txtNroCalle.Text,cmbBarrio.SelectedIndex,cmbTipoDoc.SelectedIndex, System.Convert.ToInt32(txtDoc.Text));
+                                //No se si se cambia de esta manera System.Convert.ToInt32(txtDoc.Text)
+                                //dgv_Clientes.Rows.Add(txtApe.Text.ToString(),txtNombre.Text.ToString(),txtDoc.Text.ToString(), cmbTipoDoc.SelectedValue.ToString(), cmbSexo.SelectedValue.ToString(), 
+                                //    txtFechaIng.Text.ToString(), cmbBarrio.SelectedValue.ToString(),txtCalle.Text.ToString(),txtNroCalle.Text.ToString());
                                 txtNombre.Clear();
                                 txtApe.Clear();
                                 txtDoc.Clear();
                                 cmbTipoDoc.SelectedIndex = 0;
                                 cmbSexo.SelectedIndex = 0;
                                 txtCalle.Clear();
-                                txtFechaIng.Clear();
                                 cmbBarrio.SelectedIndex = 0;
                                 txtNroCalle.Clear();
+
+                                ActualizarClientes();
                                 txtNombre.Focus();
                             }
                         }
@@ -159,14 +170,38 @@ namespace TP_Maxi_PC
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             ActualizarClientes();
+        }
+
+        private void btn_Eliminar_Click_1(object sender, EventArgs e)
+        {
+            var seleccionadas = dgv_Clientes.SelectedRows;
+
+            foreach (DataGridViewRow fila in seleccionadas)
+            {
+                var id = fila.Cells[0].Value;
+                var nombre = fila.Cells[3].Value;
+                var ape = fila.Cells[4].Value;
+
+
+
+                var confirmacion = MessageBox.Show($"Seguro que desea eliminar a: {ape} {nombre} ?", "Confirmar Operación", MessageBoxButtons.YesNo);
+                if (confirmacion.Equals(DialogResult.No))
+                {
+                    return;
+                }
+                else
+                {
+                    clientesRepositorio.borrarCliente(id.ToString());
+                    MessageBox.Show("Se elimino Correctamente!!!");
+                    ActualizarClientes();
+
+                }
+            }
         }
     }
 }

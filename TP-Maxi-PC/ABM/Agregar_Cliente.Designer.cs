@@ -41,8 +41,6 @@
             this.dgv_Clientes = new System.Windows.Forms.DataGridView();
             this.btn_Cargar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
-            this.btn_Consultar = new System.Windows.Forms.Button();
-            this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
@@ -51,8 +49,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtNroCalle = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtFechaIng = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
             this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -154,6 +153,9 @@
             // 
             // dgv_Clientes
             // 
+            this.dgv_Clientes.AllowUserToAddRows = false;
+            this.dgv_Clientes.AllowUserToDeleteRows = false;
+            this.dgv_Clientes.AllowUserToResizeRows = false;
             this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCliente,
@@ -166,15 +168,18 @@
             this.calle,
             this.nroCaller,
             this.idBarrio});
-            this.dgv_Clientes.Location = new System.Drawing.Point(12, 156);
+            this.dgv_Clientes.Location = new System.Drawing.Point(15, 156);
+            this.dgv_Clientes.MultiSelect = false;
             this.dgv_Clientes.Name = "dgv_Clientes";
-            this.dgv_Clientes.Size = new System.Drawing.Size(864, 150);
+            this.dgv_Clientes.ReadOnly = true;
+            this.dgv_Clientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Clientes.Size = new System.Drawing.Size(893, 181);
             this.dgv_Clientes.TabIndex = 19;
             this.dgv_Clientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Clientes_CellContentClick);
             // 
             // btn_Cargar
             // 
-            this.btn_Cargar.Location = new System.Drawing.Point(296, 337);
+            this.btn_Cargar.Location = new System.Drawing.Point(502, 122);
             this.btn_Cargar.Name = "btn_Cargar";
             this.btn_Cargar.Size = new System.Drawing.Size(75, 23);
             this.btn_Cargar.TabIndex = 9;
@@ -184,7 +189,7 @@
             // 
             // btn_Salir
             // 
-            this.btn_Salir.Location = new System.Drawing.Point(485, 337);
+            this.btn_Salir.Location = new System.Drawing.Point(833, 343);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(75, 23);
             this.btn_Salir.TabIndex = 16;
@@ -192,29 +197,9 @@
             this.btn_Salir.UseVisualStyleBackColor = true;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
-            // btn_Consultar
-            // 
-            this.btn_Consultar.Location = new System.Drawing.Point(502, 127);
-            this.btn_Consultar.Name = "btn_Consultar";
-            this.btn_Consultar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Consultar.TabIndex = 11;
-            this.btn_Consultar.Text = "Consultar";
-            this.btn_Consultar.UseVisualStyleBackColor = true;
-            this.btn_Consultar.Click += new System.EventHandler(this.btn_Cargar_Click);
-            // 
-            // btn_Eliminar
-            // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(392, 337);
-            this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Eliminar.TabIndex = 14;
-            this.btn_Eliminar.Text = "Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
-            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(200, 337);
+            this.btn_Modificar.Location = new System.Drawing.Point(752, 127);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(75, 23);
             this.btn_Modificar.TabIndex = 17;
@@ -230,10 +215,10 @@
             this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 23;
             this.label6.Text = "Tipo Documento:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // cmbTipoDoc
             // 
+            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoDoc.FormattingEnabled = true;
             this.cmbTipoDoc.Location = new System.Drawing.Point(107, 97);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
@@ -242,6 +227,7 @@
             // 
             // cmbSexo
             // 
+            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexo.FormattingEnabled = true;
             this.cmbSexo.Location = new System.Drawing.Point(107, 124);
             this.cmbSexo.Name = "cmbSexo";
@@ -282,80 +268,104 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Fecha Ingreso:";
             // 
-            // txtFechaIng
-            // 
-            this.txtFechaIng.Location = new System.Drawing.Point(372, 20);
-            this.txtFechaIng.Name = "txtFechaIng";
-            this.txtFechaIng.Size = new System.Drawing.Size(110, 20);
-            this.txtFechaIng.TabIndex = 5;
-            // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(12, 312);
+            this.btnActualizar.Location = new System.Drawing.Point(12, 343);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(123, 23);
             this.btnActualizar.TabIndex = 24;
-            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(377, 19);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 25;
+            // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.Location = new System.Drawing.Point(833, 127);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Eliminar.TabIndex = 26;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click_1);
             // 
             // idCliente
             // 
             this.idCliente.HeaderText = "ID";
             this.idCliente.Name = "idCliente";
+            this.idCliente.ReadOnly = true;
+            this.idCliente.Width = 50;
             // 
             // tipoDocumento
             // 
             this.tipoDocumento.HeaderText = "Tipo Documento";
             this.tipoDocumento.Name = "tipoDocumento";
+            this.tipoDocumento.ReadOnly = true;
             // 
             // nroDocumento
             // 
             this.nroDocumento.HeaderText = "Documento";
             this.nroDocumento.Name = "nroDocumento";
+            this.nroDocumento.ReadOnly = true;
             // 
             // apellido
             // 
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
             // 
             // nombre
             // 
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
             // sexo
             // 
             this.sexo.HeaderText = "Sexo";
             this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
+            this.sexo.Width = 50;
             // 
             // fechaIngreso
             // 
             this.fechaIngreso.HeaderText = "Fecha Ingreso";
             this.fechaIngreso.Name = "fechaIngreso";
+            this.fechaIngreso.ReadOnly = true;
             // 
             // calle
             // 
             this.calle.HeaderText = "Calle";
             this.calle.Name = "calle";
+            this.calle.ReadOnly = true;
             // 
             // nroCaller
             // 
             this.nroCaller.HeaderText = "Numero Calle";
             this.nroCaller.Name = "nroCaller";
+            this.nroCaller.ReadOnly = true;
+            this.nroCaller.Width = 50;
             // 
             // idBarrio
             // 
             this.idBarrio.HeaderText = "Barrio";
             this.idBarrio.Name = "idBarrio";
+            this.idBarrio.ReadOnly = true;
             // 
             // Agregar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 372);
+            this.ClientSize = new System.Drawing.Size(915, 407);
+            this.Controls.Add(this.btn_Eliminar);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.txtFechaIng);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.label8);
@@ -363,8 +373,6 @@
             this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.cmbTipoDoc);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btn_Eliminar);
-            this.Controls.Add(this.btn_Consultar);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.btn_Cargar);
@@ -403,8 +411,6 @@
         private System.Windows.Forms.DataGridView dgv_Clientes;
         private System.Windows.Forms.Button btn_Cargar;
         private System.Windows.Forms.Button btn_Salir;
-        private System.Windows.Forms.Button btn_Consultar;
-        private System.Windows.Forms.Button btn_Eliminar;
         private System.Windows.Forms.Button btn_Modificar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbTipoDoc;
@@ -413,8 +419,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNroCalle;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtFechaIng;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btn_Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroDocumento;

@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TP-Maxi-PC",
+    "\\TP-Maxi-PC\\ABM",
+    "\\TP-Maxi-PC\\Helpers",
+    "\\TP-Maxi-PC\\Repositorios"
   ],
+  "SelectedNode": "\\TP-Maxi-PC.sln",
   "PreviewInSolutionExplorer": false
 }
