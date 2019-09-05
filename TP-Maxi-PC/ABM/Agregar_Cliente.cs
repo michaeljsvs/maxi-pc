@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using TP_Maxi_PC.Repositorios;
+using TP_Maxi_PC.ABM;
 
 namespace TP_Maxi_PC
 {
@@ -189,7 +190,7 @@ namespace TP_Maxi_PC
 
 
 
-                var confirmacion = MessageBox.Show($"Seguro que desea eliminar a: {ape} {nombre} ?", "Confirmar Operación", MessageBoxButtons.YesNo);
+                var confirmacion = MessageBox.Show($"Seguro que desea eliminar a: {ape} {nombre}?", "Confirmar Operación", MessageBoxButtons.YesNo);
                 if (confirmacion.Equals(DialogResult.No))
                 {
                     return;
@@ -202,6 +203,27 @@ namespace TP_Maxi_PC
 
                 }
             }
+        }
+
+        private void button1Modificar_Click(object sender, EventArgs e)
+        {
+            var seleccionadas = dgv_Clientes.SelectedRows;
+            foreach (DataGridViewRow fila in seleccionadas)
+            {
+                String id = fila.Cells[0].Value.ToString();
+                //cmbTipoDoc.SelectedIndex = Int32.Parse(fila.Cells[1].Value.ToString());
+                String doc = fila.Cells[2].Value.ToString();
+                String ape= fila.Cells[3].Value.ToString();
+                String nombre= fila.Cells[4].Value.ToString();
+                //cmbSexo.SelectedValue = Int32.Parse(fila.Cells[5].Value.ToString());
+                String calle = fila.Cells[7].Value.ToString();
+                String nro= fila.Cells[8].Value.ToString();
+                //cmbBarrio.SelectedValue = Int32.Parse(fila.Cells[9].Value.ToString());
+                Modificar_Cliente form = new Modificar_Cliente(id,doc,ape,nombre,calle,nro);
+                form.Show();
+                ActualizarClientes();
+            }
+            
         }
     }
 }

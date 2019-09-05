@@ -39,9 +39,16 @@ namespace TP_Maxi_PC.Repositorios
         public bool insertarCliente(string nombre,string apellido,char sexo, DateTime fechaIngreso,string calle, String nroCalle,int idBarrio,int tipoDoc,int dni)
         {
             string sql = $"INSERT [dbo].[Clientes] ([tipoDocumento],[nroDocumento],[nombre],[apellido],[sexo],[fechaIngreso],[calle],[nroCalle],[idBarrio])" +
-                    $" VALUES ('{tipoDoc +1}','{dni}','{nombre}','{apellido}','{sexo}','{fechaIngreso.ToString("yyyy-MM-dd")}','{calle}','{nroCalle}','{idBarrio}')";
+                    $" VALUES ('{tipoDoc}','{dni}','{nombre}','{apellido}','{sexo}','{fechaIngreso.ToString("yyyy-MM-dd")}','{calle}','{nroCalle}','{idBarrio}')";
             return BD.EjecutarSQL(sql);
         }
+
+        public bool modificarCliente(int id, string nombre, string apellido, char sexo, DateTime fechaIngreso, string calle, String nroCalle, int idBarrio, int tipoDoc, int dni)
+        {
+            string sql = $"UPDATE [dbo].[Clientes] SET tipoDocumento = {tipoDoc},nroDocumento = {dni},nombre = '{nombre}',apellido= '{apellido}',sexo = '{sexo}',fechaIngreso= '{fechaIngreso.ToString("yyyy-MM-dd")}',calle = '{calle}',nroCalle = '{nroCalle}',idBarrio ={idBarrio} WHERE idCliente = {id}";
+            return BD.EjecutarSQL(sql);
+        }
+
         public void borrarCliente(String id)
         {
             string sql = "DELETE [dbo].[Clientes] WHERE idCliente = " + id;

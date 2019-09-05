@@ -41,7 +41,6 @@
             this.dgv_Clientes = new System.Windows.Forms.DataGridView();
             this.btn_Cargar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
-            this.btn_Modificar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
@@ -62,6 +61,7 @@
             this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroCaller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idBarrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1Modificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,16 +196,6 @@
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = true;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
-            // btn_Modificar
-            // 
-            this.btn_Modificar.Location = new System.Drawing.Point(752, 127);
-            this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Modificar.TabIndex = 17;
-            this.btn_Modificar.Text = "Modificar";
-            this.btn_Modificar.UseVisualStyleBackColor = true;
-            this.btn_Modificar.Click += new System.EventHandler(this.btn_Cargar_Click);
             // 
             // label6
             // 
@@ -358,11 +348,22 @@
             this.idBarrio.Name = "idBarrio";
             this.idBarrio.ReadOnly = true;
             // 
+            // button1Modificar
+            // 
+            this.button1Modificar.Location = new System.Drawing.Point(752, 127);
+            this.button1Modificar.Name = "button1Modificar";
+            this.button1Modificar.Size = new System.Drawing.Size(75, 23);
+            this.button1Modificar.TabIndex = 27;
+            this.button1Modificar.Text = "Modificar";
+            this.button1Modificar.UseVisualStyleBackColor = true;
+            this.button1Modificar.Click += new System.EventHandler(this.button1Modificar_Click);
+            // 
             // Agregar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 407);
+            this.Controls.Add(this.button1Modificar);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnActualizar);
@@ -374,7 +375,6 @@
             this.Controls.Add(this.cmbTipoDoc);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Salir);
-            this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.btn_Cargar);
             this.Controls.Add(this.dgv_Clientes);
             this.Controls.Add(this.cmbBarrio);
@@ -411,7 +411,6 @@
         private System.Windows.Forms.DataGridView dgv_Clientes;
         private System.Windows.Forms.Button btn_Cargar;
         private System.Windows.Forms.Button btn_Salir;
-        private System.Windows.Forms.Button btn_Modificar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbTipoDoc;
         private System.Windows.Forms.ComboBox cmbSexo;
@@ -432,5 +431,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calle;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroCaller;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBarrio;
+        private System.Windows.Forms.Button button1Modificar;
     }
 }

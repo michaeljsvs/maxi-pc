@@ -57,3 +57,4 @@ C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP
 C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
 C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
 C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+C:\Users\Braian Emanuel\Source\Repos\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_Cliente.resources
