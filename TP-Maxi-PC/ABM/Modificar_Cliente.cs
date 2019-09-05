@@ -102,6 +102,7 @@ namespace TP_Maxi_PC.ABM
                                 MessageBox.Show("Se modifico Correctamente!");
                                 this.Close();
 
+
                             }
 
                         }

@@ -220,7 +220,7 @@ namespace TP_Maxi_PC
                 String nro= fila.Cells[8].Value.ToString();
                 //cmbBarrio.SelectedValue = Int32.Parse(fila.Cells[9].Value.ToString());
                 Modificar_Cliente form = new Modificar_Cliente(id,doc,ape,nombre,calle,nro);
-                form.Show();
+                form.ShowDialog();
                 ActualizarClientes();
             }
             
