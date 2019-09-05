@@ -36,12 +36,13 @@
             this.pCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposPCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +86,8 @@
             this.pCToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
             this.modificarToolStripMenuItem,
-            this.consultarToolStripMenuItem});
+            this.consultarToolStripMenuItem,
+            this.tiposPCToolStripMenuItem});
             this.pCToolStripMenuItem.Name = "pCToolStripMenuItem";
             this.pCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pCToolStripMenuItem.Text = "PC";
@@ -103,6 +105,12 @@
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
             this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // label1
             // 
@@ -154,11 +162,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "PC";
             // 
-            // consultarToolStripMenuItem
+            // tiposPCToolStripMenuItem
             // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar";
+            this.tiposPCToolStripMenuItem.Name = "tiposPCToolStripMenuItem";
+            this.tiposPCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tiposPCToolStripMenuItem.Text = "Tipos PC";
+            this.tiposPCToolStripMenuItem.Click += new System.EventHandler(this.tiposPCToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -196,6 +205,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposPCToolStripMenuItem;
     }
 }
 

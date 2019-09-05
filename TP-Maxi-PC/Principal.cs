@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_Maxi_PC.ABM;
 
 namespace TP_Maxi_PC
 {
@@ -51,6 +52,12 @@ namespace TP_Maxi_PC
         private void button1_Click(object sender, EventArgs e)
         {
             Agregar_PC nuevo = new Agregar_PC();
+            nuevo.Show();
+        }
+
+        private void tiposPCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Agregar_TipoPC nuevo = new Agregar_TipoPC();
             nuevo.Show();
         }
     }
