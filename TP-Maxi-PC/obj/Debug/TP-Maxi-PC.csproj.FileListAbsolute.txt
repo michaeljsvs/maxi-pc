@@ -73,3 +73,21 @@ C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
 C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
 C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoPC.resources
 C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoPC.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe.config
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.pdb
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csprojAssemblyReference.cache
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_Cliente.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_PC.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoPC.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_Cliente.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoPC.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Principal.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Properties.Resources.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.GenerateResource.cache
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EditarEmpleadoForm.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EmpleadosForm.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.FormNuevoEmpleado.resources

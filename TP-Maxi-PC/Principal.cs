@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Maxi_PC.ABM;
+using TP_Maxi_PC.ABM.Empleados;
 
 namespace TP_Maxi_PC
 {
@@ -59,6 +60,13 @@ namespace TP_Maxi_PC
         {
             Agregar_TipoPC nuevo = new Agregar_TipoPC();
             nuevo.Show();
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            EmpleadosForm nuevoEmp = new EmpleadosForm(this);
+            nuevoEmp.Show();
+            this.Hide();
         }
     }
 }

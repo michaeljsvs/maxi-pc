@@ -80,5 +80,20 @@ namespace TP_Maxi_PC.Helpers
 
             return filasAfectadas > 0;
         }
+
+
+        public bool EjecutarSentenciaPreparadaSQL(string comando)
+        {
+            conectar();
+
+            cmd.CommandText = comando;
+
+            var filasAfectadas = cmd.ExecuteNonQuery(); //Cantidad de filas afectadas
+
+            //ejecuta el procedimiento <cerrar>
+            cerrar();
+
+            return filasAfectadas > 0;
+        }
     }
 }
