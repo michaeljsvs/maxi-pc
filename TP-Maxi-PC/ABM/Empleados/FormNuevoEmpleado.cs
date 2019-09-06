@@ -47,8 +47,18 @@ namespace TP_Maxi_PC.ABM.Empleados
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             var empleado = new Empleado();
+            if (txtLegajo.Text == "")
+            {
+                MessageBox.Show("Legajo inválido");
+                return;
+            }
             empleado.legajo = int.Parse(txtLegajo.Text);
             empleado.tipoDocumento = cmbTipoDoc.SelectedIndex;
+            if (txtNroDocumento.Text == "")
+            {
+                MessageBox.Show("Nro Documento inválido");
+                return;
+            }
             empleado.nroDocumento = int.Parse(txtNroDocumento.Text);
             empleado.apellido = txtApellido.Text;
             empleado.nombre = txtNombre.Text;

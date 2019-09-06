@@ -60,7 +60,7 @@
             this.DgvEmpleados.Location = new System.Drawing.Point(12, 41);
             this.DgvEmpleados.Name = "DgvEmpleados";
             this.DgvEmpleados.Size = new System.Drawing.Size(836, 234);
-            this.DgvEmpleados.TabIndex = 1;
+            this.DgvEmpleados.TabIndex = 4;
             // 
             // legajo
             // 
@@ -107,7 +107,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(762, 12);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 2;
+            this.btnActualizar.TabIndex = 0;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -117,7 +117,7 @@
             this.btnModificar.Location = new System.Drawing.Point(682, 292);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 3;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -127,7 +127,7 @@
             this.BtnNuevo.Location = new System.Drawing.Point(601, 292);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.BtnNuevo.TabIndex = 4;
+            this.BtnNuevo.TabIndex = 1;
             this.BtnNuevo.Text = "Cargar";
             this.BtnNuevo.UseVisualStyleBackColor = true;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
@@ -137,7 +137,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(763, 292);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);

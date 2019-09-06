@@ -54,7 +54,7 @@
             this.cmbTipoEmp.Location = new System.Drawing.Point(118, 213);
             this.cmbTipoEmp.Name = "cmbTipoEmp";
             this.cmbTipoEmp.Size = new System.Drawing.Size(200, 21);
-            this.cmbTipoEmp.TabIndex = 23;
+            this.cmbTipoEmp.TabIndex = 6;
             // 
             // cmbTipoDoc
             // 
@@ -62,14 +62,14 @@
             this.cmbTipoDoc.Location = new System.Drawing.Point(118, 55);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(200, 21);
-            this.cmbTipoDoc.TabIndex = 22;
+            this.cmbTipoDoc.TabIndex = 2;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(243, 316);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -79,7 +79,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(146, 316);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 20;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -161,42 +161,42 @@
             this.DtpFechaBaja.Location = new System.Drawing.Point(118, 284);
             this.DtpFechaBaja.Name = "DtpFechaBaja";
             this.DtpFechaBaja.Size = new System.Drawing.Size(200, 20);
-            this.DtpFechaBaja.TabIndex = 11;
+            this.DtpFechaBaja.TabIndex = 8;
             // 
             // DtpFechaAlta
             // 
             this.DtpFechaAlta.Location = new System.Drawing.Point(118, 249);
             this.DtpFechaAlta.Name = "DtpFechaAlta";
             this.DtpFechaAlta.Size = new System.Drawing.Size(200, 20);
-            this.DtpFechaAlta.TabIndex = 10;
+            this.DtpFechaAlta.TabIndex = 7;
             // 
             // txtNroDocumento
             // 
             this.txtNroDocumento.Location = new System.Drawing.Point(118, 96);
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.Size = new System.Drawing.Size(200, 20);
-            this.txtNroDocumento.TabIndex = 8;
+            this.txtNroDocumento.TabIndex = 3;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(118, 135);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(200, 20);
-            this.txtApellido.TabIndex = 7;
+            this.txtApellido.TabIndex = 4;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(118, 174);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
-            this.txtNombre.TabIndex = 9;
+            this.txtNombre.TabIndex = 5;
             // 
             // txtLegajo
             // 
             this.txtLegajo.Location = new System.Drawing.Point(118, 12);
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.Size = new System.Drawing.Size(200, 20);
-            this.txtLegajo.TabIndex = 6;
+            this.txtLegajo.TabIndex = 1;
             // 
             // FormNuevoEmpleado
             // 

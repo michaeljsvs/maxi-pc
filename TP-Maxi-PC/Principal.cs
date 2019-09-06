@@ -68,5 +68,11 @@ namespace TP_Maxi_PC
             nuevoEmp.Show();
             this.Hide();
         }
+
+        private void tiposComponenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Agregar_TipoComp nuevo = new Agregar_TipoComp();
+            nuevo.Show();
+        }
     }
 }

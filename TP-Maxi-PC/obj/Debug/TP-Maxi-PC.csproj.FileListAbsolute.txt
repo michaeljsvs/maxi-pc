@@ -91,3 +91,5 @@ C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debu
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EditarEmpleadoForm.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EmpleadosForm.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.FormNuevoEmpleado.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoComp.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\maxi pc Sofi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoComp.resources
