@@ -19,38 +19,20 @@ namespace TP_Maxi_PC
             InitializeComponent();
         }
 
-        private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void equiposToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //SALIR
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void pCToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        //PC y TIPOS PC
+        private void btnPc_Click(object sender, EventArgs e)
         {
             Agregar_PC nuevo = new Agregar_PC();
             nuevo.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Agregar_Cliente nuevo = new Agregar_Cliente();
-            nuevo.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Agregar_PC nuevo = new Agregar_PC();
             nuevo.Show();
@@ -62,6 +44,21 @@ namespace TP_Maxi_PC
             nuevo.Show();
         }
 
+        //TIPOS COMPONENTE
+        private void tiposComponenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Agregar_TipoComp nuevo = new Agregar_TipoComp();
+            nuevo.Show();
+        }
+
+        //CLIENTE
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            Agregar_Cliente nuevo = new Agregar_Cliente();
+            nuevo.Show();
+        }
+
+        //EMPLEADOS
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
             EmpleadosForm nuevoEmp = new EmpleadosForm(this);
@@ -69,10 +66,6 @@ namespace TP_Maxi_PC
             this.Hide();
         }
 
-        private void tiposComponenteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Agregar_TipoComp nuevo = new Agregar_TipoComp();
-            nuevo.Show();
-        }
+        
     }
 }

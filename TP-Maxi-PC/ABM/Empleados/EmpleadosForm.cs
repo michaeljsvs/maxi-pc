@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_Maxi_PC.Modelos;
 using TP_Maxi_PC.Repositorios;
 
 namespace TP_Maxi_PC.ABM.Empleados
@@ -37,33 +38,23 @@ namespace TP_Maxi_PC.ABM.Empleados
         private void ActualizarEmpleados()
         {
             DgvEmpleados.Rows.Clear();
-            var registros = _empleadosRepositorio.ObtenerEmpleados().Rows;
+            var registros = _empleadosRepositorio.ObtenerEmpleados();
             ActualizarGrilla(registros);
         }
 
-        private void ActualizarGrilla(DataRowCollection registros)
+        private void ActualizarGrilla(List<Empleado> registros)
         {
-            foreach (DataRow registro in registros)
+            foreach (Empleado registro in registros)
             {
-                if (registro.HasErrors)
-                    continue; // no corto el ciclo
-                // tratamiento de fechas
-                DateTime fecha = DateTime.MinValue;
-                DateTime fecha1 = DateTime.MinValue;
-
-                // Si lo que esta en la BD de datos se puede parsear a date se lo parsea y almacena en la varaible fecha
-                DateTime.TryParse(registro.ItemArray[6]?.ToString(), out fecha);
-                DateTime.TryParse(registro.ItemArray[7]?.ToString(), out fecha1);
-
                 var fila = new string[] {
-                    registro.ItemArray[0].ToString(), // Legajo
-                    registro.ItemArray[1].ToString(), // Tipo Documento
-                    registro.ItemArray[2].ToString(), // Nro Documento
-                    registro.ItemArray[3].ToString(), // Apellido
-                    registro.ItemArray[4].ToString(), // Nombre
-                    registro.ItemArray[5].ToString(), // Id Tipo Empleado
-                    fecha != DateTime.MinValue ? fecha.ToString("dd/MM/yyyy") : null,// Fecha Alta
-                    fecha1 != DateTime.MinValue ? fecha1.ToString("dd/MM/yyyy") : null // Fecha Baja
+                    registro.legajo.ToString(), // Legajo
+                    registro.tipoDocumento.ToString(), // Tipo Documento
+                    registro.nroDocumento.ToString(), // Nro Documento
+                    registro.apellido.ToString(), // Apellido
+                    registro.nombre.ToString(), // Nombre
+                    registro.idTipoEmpleado.ToString(), // Id Tipo Empleado
+                    registro.fechaAlta != DateTime.MinValue ? registro.fechaAlta.ToString("dd/MM/yyyy") : null,// Fecha Alta
+                    registro.fechaBaja != DateTime.MinValue ? registro.fechaBaja.ToString("dd/MM/yyyy") : null // Fecha Baja
                 };
                 DgvEmpleados.Rows.Add(fila);
             }

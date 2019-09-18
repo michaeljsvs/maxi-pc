@@ -12,19 +12,29 @@ namespace TP_Maxi_PC.Helpers
 {
     class acceso_BD
     {
-        //instancia objeto <conexion> de tipo <OleDbConnection>
-        OleDbConnection conexion = new OleDbConnection();
-        //instancia objeto <cmd> del tipo <OleDbCommand>
-        OleDbCommand cmd = new OleDbCommand();
-        //se crea uan variable local a la clase <cadena_conexio> para alojar la cadena de conexión
-        //con la base de datos que se desea conecta.
-        //Esta cadena de conexion se obtiene del explorador de servidores.
-        //El explorador de servidores brinda la cande de conexion, pero recordar que es incompleta,
-        //pues no suministra el componete <Password> que debe agregado manualmente por el programador
+        private static acceso_BD _accesoDBSingleton;
 
-        //string cadena_conexion = "Provider=SQLNCLI11;Data Source=maquis;Persist Security Info=True;User ID=avisuales1;Initial Catalog=pav1-db-peliculas;password=avisuales1"; //workstation id=pav1-db.mssql.somee.com;packet size=4096;user id=milizc_SQLLogin_1;pwd=2s9o1yeexo;data source=pav1-db.mssql.somee.com;persist security info=False;initial catalog=pav1-db
-        string cadena_conexion = "Provider=SQLNCLI11;workstation id=PAV-Maxi-PC.mssql.somee.com;packet size=4096;user id=BraianEmanuel19_SQLLogin_1;pwd=6aef7thwh9;data source=PAV-Maxi-PC.mssql.somee.com;persist security info=False;initial catalog=PAV-Maxi-PC";
-        //procedimiento privado <conectar> que prepara la conexión con la base de dato
+        private readonly OleDbConnection conexion;
+
+        private readonly OleDbCommand cmd;
+
+        private readonly string cadena_conexion = "Provider=SQLNCLI11;workstation id=PAV-Maxi-PC.mssql.somee.com;" +
+            "packet size=4096;user id=BraianEmanuel19_SQLLogin_1;pwd=6aef7thwh9;data source=PAV-Maxi-PC.mssql.somee.com;" +
+            "persist security info=False;initial catalog=PAV-Maxi-PC";
+
+        private acceso_BD()
+        {
+            conexion = new OleDbConnection();
+            cmd = new OleDbCommand();
+        }
+
+        public static acceso_BD Singleton()
+        {
+            if (_accesoDBSingleton == null)
+                _accesoDBSingleton = new acceso_BD();
+            return _accesoDBSingleton;
+        }
+
         private void conectar()
         {
             //asigan al objeto <conexion> la cadena de conexion

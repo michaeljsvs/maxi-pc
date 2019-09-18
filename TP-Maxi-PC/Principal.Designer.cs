@@ -38,14 +38,14 @@
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposPCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposComponenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPc = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.tiposComponenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,6 @@
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
-            this.archivoToolStripMenuItem.Click += new System.EventHandler(this.sistemaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -93,35 +92,41 @@
             this.tiposPCToolStripMenuItem,
             this.tiposComponenteToolStripMenuItem});
             this.pCToolStripMenuItem.Name = "pCToolStripMenuItem";
-            this.pCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pCToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
             this.pCToolStripMenuItem.Text = "PC";
-            this.pCToolStripMenuItem.Click += new System.EventHandler(this.pCToolStripMenuItem_Click);
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // tiposPCToolStripMenuItem
             // 
             this.tiposPCToolStripMenuItem.Name = "tiposPCToolStripMenuItem";
-            this.tiposPCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tiposPCToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.tiposPCToolStripMenuItem.Text = "Tipos PC";
             this.tiposPCToolStripMenuItem.Click += new System.EventHandler(this.tiposPCToolStripMenuItem_Click);
+            // 
+            // tiposComponenteToolStripMenuItem
+            // 
+            this.tiposComponenteToolStripMenuItem.Name = "tiposComponenteToolStripMenuItem";
+            this.tiposComponenteToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.tiposComponenteToolStripMenuItem.Text = "Tipos Componente";
+            this.tiposComponenteToolStripMenuItem.Click += new System.EventHandler(this.tiposComponenteToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -133,25 +138,25 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ADMINISTRACIÓN";
             // 
-            // button1
+            // btnPc
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(69, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 90);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPc.Image = ((System.Drawing.Image)(resources.GetObject("btnPc.Image")));
+            this.btnPc.Location = new System.Drawing.Point(69, 100);
+            this.btnPc.Name = "btnPc";
+            this.btnPc.Size = new System.Drawing.Size(90, 90);
+            this.btnPc.TabIndex = 3;
+            this.btnPc.UseVisualStyleBackColor = true;
+            this.btnPc.Click += new System.EventHandler(this.btnPc_Click);
             // 
-            // button2
+            // btnCliente
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(159, 100);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 90);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
+            this.btnCliente.Location = new System.Drawing.Point(159, 100);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(90, 90);
+            this.btnCliente.TabIndex = 3;
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // label2
             // 
@@ -193,13 +198,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Empleados";
             // 
-            // tiposComponenteToolStripMenuItem
-            // 
-            this.tiposComponenteToolStripMenuItem.Name = "tiposComponenteToolStripMenuItem";
-            this.tiposComponenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tiposComponenteToolStripMenuItem.Text = "Tipos Componente";
-            this.tiposComponenteToolStripMenuItem.Click += new System.EventHandler(this.tiposComponenteToolStripMenuItem_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,8 +207,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCliente);
+            this.Controls.Add(this.btnPc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -233,8 +231,8 @@
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPc;
+        private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;

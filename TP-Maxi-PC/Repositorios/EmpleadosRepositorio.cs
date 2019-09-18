@@ -19,17 +19,46 @@ namespace TP_Maxi_PC.Repositorios
 
         public EmpleadosRepositorio()
         {
-            _BD = new acceso_BD();
+            
         }
 
-        public DataTable ObtenerEmpleados()
+        public DataTable ObtenerEmpleadosDT()
         {
-            //se define una variable local a la función <sqltxt> del tipo <string> donde en el 
-            //momento de su creación se le asigan su contenido, que es el comando SELECT  
-            //necesario para poder establecer la veracidad del usuario.
             string sqltxt = "SELECT * FROM empleados";
 
-            return _BD.consulta(sqltxt);
+            return acceso_BD.Singleton().consulta(sqltxt);
+        }
+
+        public List<Empleado> ObtenerEmpleados()
+        {
+            var tablaTemporal = ObtenerEmpleadosDT();
+            var empleados = new List<Empleado>();
+            foreach (DataRow fila in tablaTemporal.Rows)
+            {
+                var empleado = new Empleado();
+                if (fila.HasErrors)
+                    continue;
+
+                // tratamiento de fechas
+                DateTime fecha = DateTime.MinValue;
+                DateTime fecha1 = DateTime.MinValue;
+
+                // Si lo que esta en la BD de datos se puede parsear a date se lo parsea y almacena en la varaible fecha
+                DateTime.TryParse(fila.ItemArray[6]?.ToString(), out fecha);
+                DateTime.TryParse(fila.ItemArray[7]?.ToString(), out fecha1);
+
+                empleado.legajo = int.Parse(fila.ItemArray[0].ToString()); // Legajo
+                empleado.tipoDocumento = int.Parse(fila.ItemArray[1].ToString()); // Tipo Documento
+                empleado.nroDocumento = int.Parse(fila.ItemArray[2].ToString()); // Nro Documento
+                empleado.apellido = fila.ItemArray[3].ToString(); // Apellido
+                empleado.nombre = fila.ItemArray[4].ToString(); // Nombre
+                empleado.idTipoEmpleado = int.Parse(fila.ItemArray[5].ToString()); // Id Tipo Empleado
+                empleado.fechaAlta = fecha; // Fecha Alta
+                empleado.fechaBaja = fecha1; // Fecha Baja
+
+                empleados.Add(empleado);
+            }
+            return empleados;
         }
 
         public bool Guardar(Empleado empleado)
@@ -103,5 +132,7 @@ namespace TP_Maxi_PC.Repositorios
 
             return empleado;
         }
+
+
     }
 }

@@ -14,13 +14,13 @@ namespace TP_Maxi_PC.Repositorios
 
         public TiposPCRepositorio()
         {
-            BD = new acceso_BD();
+            
         }
 
         public DataTable obtenerTiposDT()
         {
             string sql = "SELECT * FROM TiposPCs";
-            return BD.consulta(sql);
+            return acceso_BD.Singleton().consulta(sql);
         }
 
         public bool insertarTipoPC(string descripcion)

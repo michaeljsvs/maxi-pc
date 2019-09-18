@@ -14,13 +14,13 @@ namespace TP_Maxi_PC.Repositorios
 
         public TiposCompRepositorio()
         {
-            BD = new acceso_BD();
+            
         }
 
         public DataTable obtenerTiposComponente()
         {
             string sql = "SELECT * FROM TiposComponente";
-            return BD.consulta(sql);
+            return acceso_BD.Singleton().consulta(sql);
         }
 
         public bool insertarTiposComponente(string nombre)

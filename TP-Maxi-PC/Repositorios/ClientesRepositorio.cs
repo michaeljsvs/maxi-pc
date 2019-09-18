@@ -14,7 +14,7 @@ namespace TP_Maxi_PC.Repositorios
 
         public ClientesRepositorio()
         {
-            BD = new acceso_BD();
+            
         }
 
 
@@ -22,13 +22,13 @@ namespace TP_Maxi_PC.Repositorios
         {
             string sql = "SELECT C.idCliente,T.nombre,C.nroDocumento,C.apellido,C.nombre,C.sexo,C.fechaIngreso,C.calle,C.nroCalle,B.nombre FROM Clientes C JOIN tiposDocumento T ON T.idTipoDocumento = C.tipoDocumento JOIN Barrios B ON B.idBarrio = C.idBarrio";
 
-            return BD.consulta(sql);
+            return acceso_BD.Singleton().consulta(sql);
         }
         
         public DataTable obtenerBarriosDT()
         {
             string sql = "SELECT * FROM Barrios";
-            return BD.consulta(sql);
+            return acceso_BD.Singleton().consulta(sql);
         }
 
         public DataTable obtenerDniDT()
