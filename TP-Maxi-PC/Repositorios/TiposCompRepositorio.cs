@@ -14,7 +14,7 @@ namespace TP_Maxi_PC.Repositorios
 
         public TiposCompRepositorio()
         {
-            
+            BD = acceso_BD.Singleton();
         }
 
         public DataTable obtenerTiposComponente()

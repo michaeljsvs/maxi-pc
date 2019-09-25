@@ -14,7 +14,7 @@ namespace TP_Maxi_PC.Repositorios
 
         public ClientesRepositorio()
         {
-            
+            BD = acceso_BD.Singleton();
         }
 
 

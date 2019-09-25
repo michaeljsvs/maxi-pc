@@ -19,7 +19,7 @@ namespace TP_Maxi_PC.Repositorios
 
         public EmpleadosRepositorio()
         {
-            
+            _BD = acceso_BD.Singleton();
         }
 
         public DataTable ObtenerEmpleadosDT()
