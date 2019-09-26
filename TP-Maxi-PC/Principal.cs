@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Maxi_PC.ABM;
+using TP_Maxi_PC.ABM.Componentes;
 using TP_Maxi_PC.ABM.Empleados;
 
 namespace TP_Maxi_PC
@@ -66,6 +67,10 @@ namespace TP_Maxi_PC
             this.Hide();
         }
 
-        
+        private void componentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Agregar_Componente nuevo = new Agregar_Componente();
+            nuevo.Show();
+        }
     }
 }

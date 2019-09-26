@@ -121,3 +121,10 @@ C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_Cliente.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoComp.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoPC.resources
+C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoComp.resources
+C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.Agregar_Componente.resources
+C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.ModificarComponente.resources
+C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EditarEmpleadoForm.resources
+C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EmpleadosForm.resources
+C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.FormNuevoEmpleado.resources
+C:\Users\Sophie\Source\Repos\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoComp.resources

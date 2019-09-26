@@ -40,9 +40,8 @@ namespace TP_Maxi_PC.ABM
             listaSexo.Add("X");
             cmbSexo.DataSource = listaSexo;
             cmbSexo.SelectedIndex = 0;
-
-
         }
+
         private void ActualizarComboDni()
         {
             var tipos = clientesRepositorio.obtenerDniDT();
@@ -50,6 +49,7 @@ namespace TP_Maxi_PC.ABM
             cmbTipoDoc.DisplayMember = "nombre";
             cmbTipoDoc.DataSource = tipos;
         }
+
         private void ActualizarComboBarrio()
         {
             var barrios = clientesRepositorio.obtenerBarriosDT();
