@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.componentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,42 +90,43 @@
             this.agregarToolStripMenuItem,
             this.modificarToolStripMenuItem,
             this.consultarToolStripMenuItem,
-            this.tiposPCToolStripMenuItem,
-            this.tiposComponenteToolStripMenuItem});
+            this.componentesToolStripMenuItem,
+            this.tiposComponenteToolStripMenuItem,
+            this.tiposPCToolStripMenuItem});
             this.pCToolStripMenuItem.Name = "pCToolStripMenuItem";
-            this.pCToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
+            this.pCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pCToolStripMenuItem.Text = "PC";
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // tiposPCToolStripMenuItem
             // 
             this.tiposPCToolStripMenuItem.Name = "tiposPCToolStripMenuItem";
-            this.tiposPCToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.tiposPCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tiposPCToolStripMenuItem.Text = "Tipos PC";
             this.tiposPCToolStripMenuItem.Click += new System.EventHandler(this.tiposPCToolStripMenuItem_Click);
             // 
             // tiposComponenteToolStripMenuItem
             // 
             this.tiposComponenteToolStripMenuItem.Name = "tiposComponenteToolStripMenuItem";
-            this.tiposComponenteToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.tiposComponenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tiposComponenteToolStripMenuItem.Text = "Tipos Componente";
             this.tiposComponenteToolStripMenuItem.Click += new System.EventHandler(this.tiposComponenteToolStripMenuItem_Click);
             // 
@@ -198,6 +200,13 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Empleados";
             // 
+            // componentesToolStripMenuItem
+            // 
+            this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
+            this.componentesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.componentesToolStripMenuItem.Text = "Componentes";
+            this.componentesToolStripMenuItem.Click += new System.EventHandler(this.componentesToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +249,7 @@
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem tiposComponenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem componentesToolStripMenuItem;
     }
 }
 
