@@ -31,6 +31,13 @@ namespace TP_Maxi_PC.Repositorios
             return acceso_BD.Singleton().consulta(sql);
         }
 
+        public DataTable obtenerParaCombo()
+        {
+            // string sql = "SELECT idCliente, concat(nombre,' ', apellido) as final FROM Clientes"; CONSULTAR
+            string sql = "SELECT idCliente, apellido as final FROM Clientes";
+            return acceso_BD.Singleton().consulta(sql);
+        }
+
         public DataTable obtenerDniDT()
         {
             string sql = "SELECT * FROM TiposDocumento";

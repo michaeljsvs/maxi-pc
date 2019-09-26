@@ -30,7 +30,6 @@ namespace TP_Maxi_PC
             foreach (DataRow cliente in clientes)
             {
                 if (cliente.HasErrors)
-                
                     continue;
                     var fila = new string[]
                     {
