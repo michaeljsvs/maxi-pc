@@ -45,10 +45,11 @@
             this.agregarDueño = new System.Windows.Forms.Button();
             this.button1Modelo = new System.Windows.Forms.Button();
             this.idPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PC)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(608, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(790, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -127,16 +128,22 @@
             // 
             // dgv_PC
             // 
+            this.dgv_PC.AllowUserToAddRows = false;
+            this.dgv_PC.AllowUserToDeleteRows = false;
             this.dgv_PC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_PC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPC,
+            this.duenio,
             this.marca,
             this.modelo,
             this.TipoPC,
-            this.descripcion});
+            this.detalle});
             this.dgv_PC.Location = new System.Drawing.Point(15, 234);
+            this.dgv_PC.MultiSelect = false;
             this.dgv_PC.Name = "dgv_PC";
-            this.dgv_PC.Size = new System.Drawing.Size(581, 150);
+            this.dgv_PC.ReadOnly = true;
+            this.dgv_PC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_PC.Size = new System.Drawing.Size(763, 150);
             this.dgv_PC.TabIndex = 5;
             // 
             // btn_Cargar
@@ -212,6 +219,12 @@
             this.idPC.Name = "idPC";
             this.idPC.ReadOnly = true;
             // 
+            // duenio
+            // 
+            this.duenio.HeaderText = "Dueño";
+            this.duenio.Name = "duenio";
+            this.duenio.ReadOnly = true;
+            // 
             // marca
             // 
             this.marca.HeaderText = "Marca";
@@ -230,17 +243,18 @@
             this.TipoPC.Name = "TipoPC";
             this.TipoPC.ReadOnly = true;
             // 
-            // descripcion
+            // detalle
             // 
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
+            this.detalle.HeaderText = "Descripcion";
+            this.detalle.Name = "detalle";
+            this.detalle.ReadOnly = true;
+            this.detalle.Width = 200;
             // 
             // Agregar_PC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 391);
+            this.ClientSize = new System.Drawing.Size(790, 391);
             this.Controls.Add(this.button1Modelo);
             this.Controls.Add(this.agregarDueño);
             this.Controls.Add(this.richTextBox1);
@@ -286,9 +300,10 @@
         private System.Windows.Forms.Button agregarDueño;
         private System.Windows.Forms.Button button1Modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duenio;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detalle;
     }
 }

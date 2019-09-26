@@ -136,6 +136,7 @@ namespace TP_Maxi_PC
                         combo_Marca.SelectedIndex = 0;
                         combo_Dueño.SelectedIndex = 0;
                         richTextBox1.Clear();
+                        ActualizarPC();
                         combo_Marca.Focus();
                     }
                 }
@@ -160,7 +161,7 @@ namespace TP_Maxi_PC
 
         private void button1Modelo_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = combo_Dueño.SelectedValue.ToString();
+            richTextBox1.Text = combo_Dueño.SelectedValue.ToString() + combo_Marca.SelectedValue.ToString() + cmbModelo.SelectedValue.ToString();
         }
     }
 }
