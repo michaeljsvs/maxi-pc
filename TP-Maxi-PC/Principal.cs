@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using TP_Maxi_PC.ABM;
 using TP_Maxi_PC.ABM.Componentes;
 using TP_Maxi_PC.ABM.Empleados;
+using TP_Maxi_PC.ABM.Marcas;
+using TP_Maxi_PC.ABM.Modelos;
 
 namespace TP_Maxi_PC
 {
@@ -67,9 +69,24 @@ namespace TP_Maxi_PC
             this.Hide();
         }
 
+        //COMPONENTES
         private void componentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Agregar_Componente nuevo = new Agregar_Componente();
+            nuevo.Show();
+        }
+
+        //MARCAS
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarMarca nueva = new AgregarMarca();
+            nueva.Show();
+        }
+
+        //MODELOS
+        private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarModelo nuevo = new AgregarModelo();
             nuevo.Show();
         }
     }

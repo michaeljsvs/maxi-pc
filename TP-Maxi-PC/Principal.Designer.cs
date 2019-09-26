@@ -40,6 +40,7 @@
             this.componentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposComponenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposPCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPc = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,50 +94,59 @@
             this.consultarToolStripMenuItem,
             this.componentesToolStripMenuItem,
             this.tiposComponenteToolStripMenuItem,
-            this.tiposPCToolStripMenuItem});
+            this.tiposPCToolStripMenuItem,
+            this.marcasToolStripMenuItem,
+            this.modelosToolStripMenuItem});
             this.pCToolStripMenuItem.Name = "pCToolStripMenuItem";
-            this.pCToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
+            this.pCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pCToolStripMenuItem.Text = "PC";
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // componentesToolStripMenuItem
             // 
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
-            this.componentesToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.componentesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.componentesToolStripMenuItem.Text = "Componentes";
             this.componentesToolStripMenuItem.Click += new System.EventHandler(this.componentesToolStripMenuItem_Click);
             // 
             // tiposComponenteToolStripMenuItem
             // 
             this.tiposComponenteToolStripMenuItem.Name = "tiposComponenteToolStripMenuItem";
-            this.tiposComponenteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.tiposComponenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tiposComponenteToolStripMenuItem.Text = "Tipos Componente";
             this.tiposComponenteToolStripMenuItem.Click += new System.EventHandler(this.tiposComponenteToolStripMenuItem_Click);
             // 
             // tiposPCToolStripMenuItem
             // 
             this.tiposPCToolStripMenuItem.Name = "tiposPCToolStripMenuItem";
-            this.tiposPCToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.tiposPCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tiposPCToolStripMenuItem.Text = "Tipos PC";
             this.tiposPCToolStripMenuItem.Click += new System.EventHandler(this.tiposPCToolStripMenuItem_Click);
+            // 
+            // marcasToolStripMenuItem
+            // 
+            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcasToolStripMenuItem.Text = "Marcas";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -207,6 +218,13 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Empleados";
             // 
+            // modelosToolStripMenuItem
+            // 
+            this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
+            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modelosToolStripMenuItem.Text = "Modelos";
+            this.modelosToolStripMenuItem.Click += new System.EventHandler(this.modelosToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +268,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem tiposComponenteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem componentesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modelosToolStripMenuItem;
     }
 }
 

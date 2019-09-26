@@ -150,3 +150,29 @@ C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\michaeljsvs\max
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe.config
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.pdb
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csprojAssemblyReference.cache
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_Cliente.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoComp.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_PC.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoPC.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.Agregar_Componente.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.ModificarComponente.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EditarEmpleadoForm.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EmpleadosForm.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.FormNuevoEmpleado.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Marcas.AgregarMarca.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Marcas.ModificarMarcas.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_Cliente.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoComp.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoPC.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Principal.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Properties.Resources.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.GenerateResource.cache
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modelos.AgregarModelo.resources
+C:\Users\Sophie\Source\Repos\maxi-pc2\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modelos.ModificarModelo.resources
