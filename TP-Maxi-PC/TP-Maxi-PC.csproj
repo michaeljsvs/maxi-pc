@@ -143,6 +143,7 @@
       <DependentUpon>Modificar_TipoPC.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\acceso_BD.cs" />
+    <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\Empleado.cs" />
     <Compile Include="Principal.cs">
