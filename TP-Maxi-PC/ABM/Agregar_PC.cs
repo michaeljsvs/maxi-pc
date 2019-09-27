@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Collections;
 using TP_Maxi_PC.Repositorios;
 using TP_Maxi_PC.ABM;
+using TP_Maxi_PC.ABM.Modelos;
+using TP_Maxi_PC.ABM.Marcas;
 
 namespace TP_Maxi_PC
 {
@@ -38,7 +40,8 @@ namespace TP_Maxi_PC
                     pc.ItemArray[1].ToString(),
                     pc.ItemArray[2].ToString(),
                     pc.ItemArray[3].ToString(),
-                    pc.ItemArray[4].ToString()
+                    pc.ItemArray[4].ToString(),
+                    pc.ItemArray[5].ToString()
                 };
                 dgv_PC.Rows.Add(fila);
 
@@ -66,6 +69,14 @@ namespace TP_Maxi_PC
             cmbModelo.ValueMember = "idModelo";
             cmbModelo.DisplayMember = "nombre";
             cmbModelo.DataSource = modelos;
+        }
+
+        private void actualizarTipoPC()
+        {
+            var tipos = pcrepo.obtenerTipos();
+            cmbTipoPC.ValueMember = "idTipoPC";
+            cmbTipoPC.DisplayMember = "descripcion";
+            cmbTipoPC.DataSource = tipos;
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +113,7 @@ namespace TP_Maxi_PC
             actualizarDueños();
             actualizarModelos();
             ActualizarPC();
+            actualizarTipoPC();
         }
         
 
@@ -131,7 +143,10 @@ namespace TP_Maxi_PC
                         int pasar = Convert.ToInt32(combo_Dueño.SelectedValue.ToString());
                         int pasarMarca = Convert.ToInt32(combo_Marca.SelectedValue.ToString());
                         int pasarModelo = Convert.ToInt32(cmbModelo.SelectedValue.ToString());
-                            pcrepo.insertarPC(pasar, pasarMarca, pasarModelo,richTextBox1.Text);
+                        int pasarTipo = Convert.ToInt32(cmbTipoPC.SelectedValue.ToString());
+
+                        pcrepo.insertarPC(pasar, pasarMarca, pasarModelo,richTextBox1.Text,pasarTipo);
+                        
                         cmbModelo.SelectedIndex = 0;
                         combo_Marca.SelectedIndex = 0;
                         combo_Dueño.SelectedIndex = 0;
@@ -156,12 +171,19 @@ namespace TP_Maxi_PC
         private void agregarMarca_Click(object sender, EventArgs e)
         {
             Agregar_Cliente nuevo = new Agregar_Cliente();
-            nuevo.Show();
+            nuevo.ShowDialog();
         }
 
         private void button1Modelo_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = combo_Dueño.SelectedValue.ToString() + combo_Marca.SelectedValue.ToString() + cmbModelo.SelectedValue.ToString();
+            AgregarModelo nuevo = new AgregarModelo();
+            nuevo.ShowDialog();
+        }
+
+        private void nuevaMarca_Click(object sender, EventArgs e)
+        {
+            AgregarMarca nueva = new AgregarMarca();
+            nueva.ShowDialog();
         }
     }
 }

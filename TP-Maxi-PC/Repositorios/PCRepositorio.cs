@@ -22,7 +22,7 @@ namespace TP_Maxi_PC.Repositorios
 
         public DataTable obtenerPC()
         {
-            string sql = "SELECT P.idPC,D.apellido as duenio, A.nombre as marca, O.nombre as modelo, T.descripcion AS TipoPC, P.descripcion as detalle FROM PCs P JOIN Marcas A ON P.idMarca = A.idMarca JOIN Modelos O ON P.idModelo = O.idModelo JOIN TiposPCS T ON T.idTipoPC = P.idTipoPC JOIN Clientes D ON D.idCliente = P.idDueño";
+            string sql = "SELECT P.idPC,D.apellido as duenio, A.nombre as marca, O.nombre as modelo, T.descripcion AS TipoPC, P.descripcion FROM PCs P JOIN Marcas A ON P.idMarca = A.idMarca JOIN Modelos O ON P.idModelo = O.idModelo JOIN TiposPCS T ON T.idTipoPC = P.idTipoPC JOIN Clientes D ON D.idCliente = P.idDueño";
             return acceso_BD.Singleton().consulta(sql);
         }
 
@@ -41,10 +41,14 @@ namespace TP_Maxi_PC.Repositorios
             string sql = "SELECT * FROM Modelos WHERE idMarca = " + id;
             return acceso_BD.Singleton().consulta(sql);
         }
-
-        public bool insertarPC(int dueño,int marca, int modelo, string descripcion)
+        public DataTable obtenerTipos()
         {
-            string sql = $"INSERT [dbo].[Pcs] ([idDueño],[idMarca],[idModelo],[descripcion]) VALUES ('" + dueño + "','" + marca +"','" + modelo + "','" + descripcion + "')"; 
+            string sql = "SELECT * FROM TiposPCs";
+            return acceso_BD.Singleton().consulta(sql);
+        }
+        public bool insertarPC(int dueño,int marca, int modelo, string descripcion,int tipoPC)
+        {
+            string sql = $"INSERT [dbo].[Pcs] ([idDueño],[idMarca],[idModelo],[descripcion],[idTipoPC]) VALUES ('" + dueño + "','" + marca +"','" + modelo + "','" + descripcion +"','"+ tipoPC + "')"; 
             return BD.EjecutarSQL(sql);
         }
         //public int obtenerID(string apellido)

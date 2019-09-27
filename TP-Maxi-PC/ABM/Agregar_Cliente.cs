@@ -229,7 +229,7 @@ namespace TP_Maxi_PC
         private void btn_AgregarBarrio_Click(object sender, EventArgs e)
         {
             AgregarBarrio nuevo = new AgregarBarrio();
-            nuevo.Show();
+            nuevo.ShowDialog();
         }
     }
 }

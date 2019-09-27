@@ -37,6 +37,12 @@
             this.lbl_Marca = new System.Windows.Forms.Label();
             this.lbl_dueño = new System.Windows.Forms.Label();
             this.dgv_PC = new System.Windows.Forms.DataGridView();
+            this.idPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Cargar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -44,12 +50,9 @@
             this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.agregarDueño = new System.Windows.Forms.Button();
             this.button1Modelo = new System.Windows.Forms.Button();
-            this.idPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.cmbTipoPC = new System.Windows.Forms.ComboBox();
+            this.nuevaMarca = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PC)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +123,7 @@
             // lbl_dueño
             // 
             this.lbl_dueño.AutoSize = true;
-            this.lbl_dueño.Location = new System.Drawing.Point(12, 85);
+            this.lbl_dueño.Location = new System.Drawing.Point(15, 85);
             this.lbl_dueño.Name = "lbl_dueño";
             this.lbl_dueño.Size = new System.Drawing.Size(42, 13);
             this.lbl_dueño.TabIndex = 1;
@@ -137,8 +140,8 @@
             this.marca,
             this.modelo,
             this.TipoPC,
-            this.detalle});
-            this.dgv_PC.Location = new System.Drawing.Point(15, 234);
+            this.desscripcion});
+            this.dgv_PC.Location = new System.Drawing.Point(15, 272);
             this.dgv_PC.MultiSelect = false;
             this.dgv_PC.Name = "dgv_PC";
             this.dgv_PC.ReadOnly = true;
@@ -146,9 +149,46 @@
             this.dgv_PC.Size = new System.Drawing.Size(763, 150);
             this.dgv_PC.TabIndex = 5;
             // 
+            // idPC
+            // 
+            this.idPC.HeaderText = "ID";
+            this.idPC.Name = "idPC";
+            this.idPC.ReadOnly = true;
+            // 
+            // duenio
+            // 
+            this.duenio.HeaderText = "Dueño";
+            this.duenio.Name = "duenio";
+            this.duenio.ReadOnly = true;
+            // 
+            // marca
+            // 
+            this.marca.HeaderText = "Marca";
+            this.marca.Name = "marca";
+            this.marca.ReadOnly = true;
+            // 
+            // modelo
+            // 
+            this.modelo.HeaderText = "Modelo";
+            this.modelo.Name = "modelo";
+            this.modelo.ReadOnly = true;
+            // 
+            // TipoPC
+            // 
+            this.TipoPC.HeaderText = "TipoPC";
+            this.TipoPC.Name = "TipoPC";
+            this.TipoPC.ReadOnly = true;
+            // 
+            // desscripcion
+            // 
+            this.desscripcion.HeaderText = "Descripcion";
+            this.desscripcion.Name = "desscripcion";
+            this.desscripcion.ReadOnly = true;
+            this.desscripcion.Width = 200;
+            // 
             // btn_Cargar
             // 
-            this.btn_Cargar.Location = new System.Drawing.Point(224, 121);
+            this.btn_Cargar.Location = new System.Drawing.Point(224, 170);
             this.btn_Cargar.Name = "btn_Cargar";
             this.btn_Cargar.Size = new System.Drawing.Size(75, 23);
             this.btn_Cargar.TabIndex = 3;
@@ -158,7 +198,7 @@
             // 
             // btn_Salir
             // 
-            this.btn_Salir.Location = new System.Drawing.Point(305, 121);
+            this.btn_Salir.Location = new System.Drawing.Point(305, 170);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(75, 23);
             this.btn_Salir.TabIndex = 4;
@@ -168,7 +208,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(15, 150);
+            this.richTextBox1.Location = new System.Drawing.Point(15, 199);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(367, 67);
             this.richTextBox1.TabIndex = 6;
@@ -177,7 +217,7 @@
             // labelDescripcion
             // 
             this.labelDescripcion.AutoSize = true;
-            this.labelDescripcion.Location = new System.Drawing.Point(12, 134);
+            this.labelDescripcion.Location = new System.Drawing.Point(12, 183);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(66, 13);
             this.labelDescripcion.TabIndex = 1;
@@ -213,48 +253,42 @@
             this.button1Modelo.UseVisualStyleBackColor = true;
             this.button1Modelo.Click += new System.EventHandler(this.button1Modelo_Click);
             // 
-            // idPC
+            // lblMarca
             // 
-            this.idPC.HeaderText = "ID";
-            this.idPC.Name = "idPC";
-            this.idPC.ReadOnly = true;
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Location = new System.Drawing.Point(12, 112);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(51, 13);
+            this.lblMarca.TabIndex = 1;
+            this.lblMarca.Text = "Tipo PC: ";
             // 
-            // duenio
+            // cmbTipoPC
             // 
-            this.duenio.HeaderText = "Dueño";
-            this.duenio.Name = "duenio";
-            this.duenio.ReadOnly = true;
+            this.cmbTipoPC.AllowDrop = true;
+            this.cmbTipoPC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoPC.FormattingEnabled = true;
+            this.cmbTipoPC.Location = new System.Drawing.Point(63, 109);
+            this.cmbTipoPC.Name = "cmbTipoPC";
+            this.cmbTipoPC.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoPC.TabIndex = 1;
+            this.cmbTipoPC.SelectedIndexChanged += new System.EventHandler(this.cambioMarca);
             // 
-            // marca
+            // nuevaMarca
             // 
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            this.marca.ReadOnly = true;
-            // 
-            // modelo
-            // 
-            this.modelo.HeaderText = "Modelo";
-            this.modelo.Name = "modelo";
-            this.modelo.ReadOnly = true;
-            // 
-            // TipoPC
-            // 
-            this.TipoPC.HeaderText = "TipoPC";
-            this.TipoPC.Name = "TipoPC";
-            this.TipoPC.ReadOnly = true;
-            // 
-            // detalle
-            // 
-            this.detalle.HeaderText = "Descripcion";
-            this.detalle.Name = "detalle";
-            this.detalle.ReadOnly = true;
-            this.detalle.Width = 200;
+            this.nuevaMarca.Location = new System.Drawing.Point(190, 30);
+            this.nuevaMarca.Name = "nuevaMarca";
+            this.nuevaMarca.Size = new System.Drawing.Size(21, 21);
+            this.nuevaMarca.TabIndex = 9;
+            this.nuevaMarca.Text = "+";
+            this.nuevaMarca.UseVisualStyleBackColor = true;
+            this.nuevaMarca.Click += new System.EventHandler(this.nuevaMarca_Click);
             // 
             // Agregar_PC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 391);
+            this.ClientSize = new System.Drawing.Size(790, 434);
+            this.Controls.Add(this.nuevaMarca);
             this.Controls.Add(this.button1Modelo);
             this.Controls.Add(this.agregarDueño);
             this.Controls.Add(this.richTextBox1);
@@ -263,8 +297,10 @@
             this.Controls.Add(this.dgv_PC);
             this.Controls.Add(this.combo_Dueño);
             this.Controls.Add(this.cmbModelo);
+            this.Controls.Add(this.cmbTipoPC);
             this.Controls.Add(this.combo_Marca);
             this.Controls.Add(this.labelDescripcion);
+            this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lbl_dueño);
             this.Controls.Add(this.lbl_Marca);
             this.Controls.Add(this.lbl_Modelo);
@@ -299,11 +335,14 @@
         private System.Windows.Forms.ComboBox cmbModelo;
         private System.Windows.Forms.Button agregarDueño;
         private System.Windows.Forms.Button button1Modelo;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.ComboBox cmbTipoPC;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPC;
         private System.Windows.Forms.DataGridViewTextBoxColumn duenio;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn detalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn desscripcion;
+        private System.Windows.Forms.Button nuevaMarca;
     }
 }
