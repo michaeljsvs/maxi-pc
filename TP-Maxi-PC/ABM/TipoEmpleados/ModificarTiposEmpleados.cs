@@ -11,43 +11,43 @@ using System.Windows.Forms;
 using TP_Maxi_PC.Modelos;
 using TP_Maxi_PC.Repositorios;
 
-namespace TP_Maxi_PC.ABM.TipoDocumentos
+namespace TP_Maxi_PC.ABM.TipoEmpleados
 {
-    public partial class ModificarTiposDocumento : Form
+    public partial class ModificarTiposEmpleados : Form
     {
-        TiposDocumentoRepositorio _tipoDocumentoRepositorio;
-        TiposDocumento tipoDoc;
+        TiposEmpleadoRepositorio _tipoEmpleadoRepositorio;
+        TiposEmpleado tipoEmp;
 
-        public ModificarTiposDocumento()
+        public ModificarTiposEmpleados()
         {
             InitializeComponent();
         }
 
-        public ModificarTiposDocumento(string id_TipoDoc)
+        public ModificarTiposEmpleados(string id_TipoEmp)
         {
             InitializeComponent();
-            _tipoDocumentoRepositorio = new TiposDocumentoRepositorio();
-            tipoDoc = _tipoDocumentoRepositorio.ObtenerTipoDocumento(id_TipoDoc);
+            _tipoEmpleadoRepositorio = new TiposEmpleadoRepositorio();
+            tipoEmp = _tipoEmpleadoRepositorio.ObtenerTipoEmpleado(id_TipoEmp);
         }
 
         //LOAD EDITAR
-        private void ModificarTiposDocumento_Load(object sender, EventArgs e)
+        private void ModificarTiposEmpleados_Load(object sender, EventArgs e)
         {
-            txtID.Text = Convert.ToString(tipoDoc.idTipoDocumento);
-            txtNombre.Text = tipoDoc.nombre;
+            txtID.Text = Convert.ToString(tipoEmp.idTipoEmpleado);
+            txtNombre.Text = tipoEmp.nombre;
         }
 
         //BTN GUARDAR
-        private void btn_Cargar_Click_1(object sender, EventArgs e)
+        private void btn_Cargar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Confirma tipo documento modificado", "Confirmación", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+            if (MessageBox.Show("Confirma tipo empleado modificado", "Confirmación", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
                 return;
 
             StringBuilder mensaje = new StringBuilder("La operación ");
-            var tipoDocumento = PrepararTipoDocumento();
+            var tipoEmpleado = PrepararTipoEmpleado();
             try
             {
-                if (_tipoDocumentoRepositorio.Actualizar(tipoDocumento))
+                if (_tipoEmpleadoRepositorio.Actualizar(tipoEmpleado))
                 {
                     MessageBox.Show("Se guardó con éxito");
                 }
@@ -62,22 +62,22 @@ namespace TP_Maxi_PC.ABM.TipoDocumentos
             }
             finally
             {
-                if (tipoDocumento == null)
+                if (tipoEmpleado == null)
                     MessageBox.Show(mensaje.ToString());
                 this.Dispose();
             }
         }
 
         //CREA UN OBJETO CON LOS DATOS DEL FORM
-        private TiposDocumento PrepararTipoDocumento()
+        private TiposEmpleado PrepararTipoEmpleado()
         {
             // Agregar validaciones
-            var tiposDocumento = new TiposDocumento()
+            var tiposEmpleado = new TiposEmpleado()
             {
-                idTipoDocumento = int.Parse(txtID.Text),
+                idTipoEmpleado = int.Parse(txtID.Text),
                 nombre = txtNombre.Text
             };
-            return tiposDocumento;
+            return tiposEmpleado;
         }
     }
 }

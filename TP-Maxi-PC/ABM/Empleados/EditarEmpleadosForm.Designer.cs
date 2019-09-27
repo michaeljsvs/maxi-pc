@@ -47,6 +47,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtLegajo = new System.Windows.Forms.TextBox();
             this.btn_agregarTipoDoc = new System.Windows.Forms.Button();
+            this.btn_agregarTipoEmp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbTipoEmp
@@ -209,11 +210,22 @@
             this.btn_agregarTipoDoc.UseVisualStyleBackColor = true;
             this.btn_agregarTipoDoc.Click += new System.EventHandler(this.btn_agregarTipoDoc_Click);
             // 
+            // btn_agregarTipoEmp
+            // 
+            this.btn_agregarTipoEmp.Location = new System.Drawing.Point(328, 213);
+            this.btn_agregarTipoEmp.Name = "btn_agregarTipoEmp";
+            this.btn_agregarTipoEmp.Size = new System.Drawing.Size(24, 21);
+            this.btn_agregarTipoEmp.TabIndex = 39;
+            this.btn_agregarTipoEmp.Text = "+";
+            this.btn_agregarTipoEmp.UseVisualStyleBackColor = true;
+            this.btn_agregarTipoEmp.Click += new System.EventHandler(this.btn_agregarTipoEmp_Click);
+            // 
             // EditarEmpleadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 352);
+            this.Controls.Add(this.btn_agregarTipoEmp);
             this.Controls.Add(this.btn_agregarTipoDoc);
             this.Controls.Add(this.cmbTipoEmp);
             this.Controls.Add(this.cmbTipoDoc);
@@ -262,5 +274,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.Button btn_agregarTipoDoc;
+        private System.Windows.Forms.Button btn_agregarTipoEmp;
     }
 }

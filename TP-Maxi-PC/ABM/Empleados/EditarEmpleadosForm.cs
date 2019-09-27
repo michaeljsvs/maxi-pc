@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Maxi_PC.ABM.TipoDocumentos;
+using TP_Maxi_PC.ABM.TipoEmpleados;
 using TP_Maxi_PC.Modelos;
 using TP_Maxi_PC.Repositorios;
 
@@ -111,6 +112,12 @@ namespace TP_Maxi_PC.ABM.Empleados
         private void btn_agregarTipoDoc_Click(object sender, EventArgs e)
         {
             AgregarTiposDocumento nuevo = new AgregarTiposDocumento();
+            nuevo.Show();
+        }
+
+        private void btn_agregarTipoEmp_Click(object sender, EventArgs e)
+        {
+            AgregarTiposEmpleado nuevo = new AgregarTiposEmpleado();
             nuevo.Show();
         }
     }
