@@ -86,13 +86,6 @@ namespace TP_Maxi_PC.Repositorios
             return acceso_BD.Singleton().EjecutarSQL(sqltxt);
         }
 
-        //OBTENER TABLA DE TIPODOCUMENTOS
-        public DataTable ObtenerTipoDoc()
-        {
-            string sqltxt = "SELECT * FROM tiposDocumento";
-            return acceso_BD.Singleton().consulta(sqltxt);
-        }
-
         //OBTENER TABLA DE TIPOEMPLEADOS
         public DataTable ObtenerTipoEmpleado()
         {

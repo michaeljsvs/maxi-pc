@@ -45,10 +45,8 @@ namespace TP_Maxi_PC.Repositorios
         //GUARDAR (VER SI SE PUEDEN SACAR LOS SET IDENTITY AL ELIMINAR LAS PK)
         public bool Guardar(TiposDocumento tipoDocumento)
         {
-            string sqltxt = $"SET IDENTITY_INSERT [dbo].[TiposDocumento] ON " +
-                $"INSERT [dbo].[TiposDocumento] ([idTipoDocumento], [nombre]) " +
-                $"VALUES ('{tipoDocumento.idTipoDocumento}', '{tipoDocumento.nombre}')" +
-                $"SET IDENTITY_INSERT [dbo].[TiposDocumento] OFF";
+            string sqltxt = $"INSERT [dbo].[TiposDocumento] ([nombre]) " +
+                $"VALUES ('{tipoDocumento.nombre}')";
 
             return acceso_BD.Singleton().EjecutarSQL(sqltxt);
         }

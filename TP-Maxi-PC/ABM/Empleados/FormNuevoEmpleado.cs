@@ -35,7 +35,7 @@ namespace TP_Maxi_PC.ABM.Empleados
         //BTN GUARDAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Confirma empleado modificado", "Confirmación", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+            if (MessageBox.Show("Confirma empleado nuevo", "Confirmación", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
                 return;
 
             StringBuilder mensaje = new StringBuilder("La operación ");

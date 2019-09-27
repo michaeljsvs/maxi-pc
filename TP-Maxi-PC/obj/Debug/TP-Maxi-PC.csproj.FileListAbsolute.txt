@@ -202,3 +202,5 @@ C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP-M
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoDocumentos.AgregarTiposDocumento.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoDocumentos.ModificarTiposDocumento.resources

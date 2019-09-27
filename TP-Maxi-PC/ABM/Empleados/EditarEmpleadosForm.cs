@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_Maxi_PC.ABM.TipoDocumentos;
 using TP_Maxi_PC.Modelos;
 using TP_Maxi_PC.Repositorios;
 
@@ -104,6 +105,13 @@ namespace TP_Maxi_PC.ABM.Empleados
                 fechaBaja = DtpFechaBaja.Value.Date
             };
             return empleado;
+        }
+
+        //BTN AGREGAR TIPOS DOCUMENTO
+        private void btn_agregarTipoDoc_Click(object sender, EventArgs e)
+        {
+            AgregarTiposDocumento nuevo = new AgregarTiposDocumento();
+            nuevo.Show();
         }
     }
 }

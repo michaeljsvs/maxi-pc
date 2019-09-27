@@ -142,6 +142,18 @@
     <Compile Include="ABM\Modificar_TipoPC.Designer.cs">
       <DependentUpon>Modificar_TipoPC.cs</DependentUpon>
     </Compile>
+    <Compile Include="ABM\TipoDocumentos\AgregarTiposDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\TipoDocumentos\AgregarTiposDocumento.Designer.cs">
+      <DependentUpon>AgregarTiposDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\TipoDocumentos\ModificarTiposDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\TipoDocumentos\ModificarTiposDocumento.Designer.cs">
+      <DependentUpon>ModificarTiposDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\acceso_BD.cs" />
     <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Modelos\Cliente.cs" />
@@ -212,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ABM\Modificar_TipoPC.resx">
       <DependentUpon>Modificar_TipoPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\TipoDocumentos\AgregarTiposDocumento.resx">
+      <DependentUpon>AgregarTiposDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\TipoDocumentos\ModificarTiposDocumento.resx">
+      <DependentUpon>ModificarTiposDocumento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

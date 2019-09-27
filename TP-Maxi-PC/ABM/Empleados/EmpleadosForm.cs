@@ -29,6 +29,7 @@ namespace TP_Maxi_PC.ABM.Empleados
             _empleadosRepositorio = new EmpleadosRepositorio();
             _principalForm = principalForm;
         }
+
         //LOAD
         private void EmpleadosForm_Load(object sender, EventArgs e)
         {
