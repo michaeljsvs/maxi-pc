@@ -29,12 +29,13 @@ namespace TP_Maxi_PC.ABM.Empleados
             _empleadosRepositorio = new EmpleadosRepositorio();
             _principalForm = principalForm;
         }
-
+        //LOAD
         private void EmpleadosForm_Load(object sender, EventArgs e)
         {
             ActualizarEmpleados();
         }
 
+        //ACTUALIZAR (OBTIENE LISTA)
         private void ActualizarEmpleados()
         {
             DgvEmpleados.Rows.Clear();
@@ -42,25 +43,26 @@ namespace TP_Maxi_PC.ABM.Empleados
             ActualizarGrilla(registros);
         }
 
+        //ACTUALIZA EL DATA GRID VIEW
         private void ActualizarGrilla(List<Empleado> registros)
         {
             foreach (Empleado registro in registros)
             {
                 var fila = new string[] {
                     registro.legajo.ToString(), // Legajo
-                    registro.tipoDocumento.ToString(), // Tipo Documento
+                    registro.TiposDocumento.nombre.ToString(), // Nombre Tipo Documento
                     registro.nroDocumento.ToString(), // Nro Documento
                     registro.apellido.ToString(), // Apellido
                     registro.nombre.ToString(), // Nombre
-                    registro.idTipoEmpleado.ToString(), // Id Tipo Empleado
+                    registro.idTipoEmpleado.nombre.ToString(), // Nombre Tipo Empleado
                     registro.fechaAlta != DateTime.MinValue ? registro.fechaAlta.ToString("dd/MM/yyyy") : null,// Fecha Alta
                     registro.fechaBaja != DateTime.MinValue ? registro.fechaBaja.ToString("dd/MM/yyyy") : null // Fecha Baja
                 };
                 DgvEmpleados.Rows.Add(fila);
             }
-
         }
 
+        //BTN NUEVO o CARGAR
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
             var ventana = new FormNuevoEmpleado();
@@ -68,6 +70,7 @@ namespace TP_Maxi_PC.ABM.Empleados
             ActualizarEmpleados();
         }
 
+        //BTN ELIMINAR
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             var seleccionadas = DgvEmpleados.SelectedRows;
@@ -99,11 +102,13 @@ namespace TP_Maxi_PC.ABM.Empleados
             }
         }
 
+        //BTN CLOSING X
         private void EmpleadosForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             _principalForm.Show();
         }
 
+        //BTN MODIFICAR
         private void btnModificar_Click(object sender, EventArgs e)
         {
             var seleccionadas = DgvEmpleados.SelectedRows;
@@ -122,6 +127,7 @@ namespace TP_Maxi_PC.ABM.Empleados
             }
         }
 
+        //BTN ACTUALIZAR
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             ActualizarEmpleados();

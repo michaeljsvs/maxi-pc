@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PTP_Maxi_PC.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,103 +16,76 @@ namespace TP_Maxi_PC.ABM.Empleados
     public partial class FormNuevoEmpleado : Form
     {
         EmpleadosRepositorio _empleadosRepositorio;
+        TiposDocumentoRepositorio _tipoDocumentoRepositorio;
 
         public FormNuevoEmpleado()
         {
             InitializeComponent();
             _empleadosRepositorio = new EmpleadosRepositorio();
+            _tipoDocumentoRepositorio = new TiposDocumentoRepositorio();
         }
 
+        //LOAD NUEVO
         private void FormNuevoEmpleado_Load(object sender, EventArgs e)
         {
-            ActualizarTipoDocumento();
-            ActualizarTipoEmpleado();
+            Utils.CargarCombo(ref cmbTipoDoc, _tipoDocumentoRepositorio.ObtenerTiposDocumentoDT(), "idTipoDocumento", "nombre");
+            Utils.CargarCombo(ref cmbTipoEmp, _empleadosRepositorio.ObtenerTipoEmpleado(), "idTipoEmpleado", "nombre");
         }
 
-        private void ActualizarTipoDocumento()
-        {
-            var tipoDoc = _empleadosRepositorio.ObtenerTipoDoc();
-            cmbTipoDoc.ValueMember = "idTipoDocumento";
-            cmbTipoDoc.DisplayMember = "nombre";
-            cmbTipoDoc.DataSource = tipoDoc;
-        }
-
-        private void ActualizarTipoEmpleado()
-        {
-            var tipoEmp = _empleadosRepositorio.ObtenerTipoEmpleado();
-            cmbTipoEmp.ValueMember = "idTipoEmpleado";
-            cmbTipoEmp.DisplayMember = "nombre";
-            cmbTipoEmp.DataSource = tipoEmp;
-        }
-
+        //BTN GUARDAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            var empleado = new Empleado();
-            if (txtLegajo.Text == "")
-            {
-                MessageBox.Show("Legajo inválido");
+            if (MessageBox.Show("Confirma empleado modificado", "Confirmación", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
                 return;
-            }
-            empleado.legajo = int.Parse(txtLegajo.Text);
-            empleado.tipoDocumento = cmbTipoDoc.SelectedIndex;
-            if (txtNroDocumento.Text == "")
-            {
-                MessageBox.Show("Nro Documento inválido");
-                return;
-            }
-            empleado.nroDocumento = int.Parse(txtNroDocumento.Text);
-            empleado.apellido = txtApellido.Text;
-            empleado.nombre = txtNombre.Text;
-            empleado.idTipoEmpleado = cmbTipoEmp.SelectedIndex + 1;
-            empleado.fechaAlta = DtpFechaAlta.Value.Date;
-            empleado.fechaBaja = DtpFechaBaja.Value.Date;
 
-            if (!empleado.ValidarLegajo())
+            StringBuilder mensaje = new StringBuilder("La operación ");
+            var empleado = PrepararEmpleado();
+            try
             {
-                MessageBox.Show("Legajo inválido");
-                return;
+                if (_empleadosRepositorio.Guardar(empleado))
+                {
+                    MessageBox.Show("Se guardó con éxito");
+                }
             }
-            if (!empleado.ValidarTipoDocumento())
+            catch (InvalidOperationException ex)
             {
-                MessageBox.Show("Tipo Documento inválido");
-                return;
+                mensaje.Append("no se realizó. Hubo un problema en la conexión a la BD");
             }
-            if (!empleado.ValidarNroDocumento())
+            catch (Exception exc)
             {
-                MessageBox.Show("Nro Documento inválido");
-                return;
+                mensaje.Append("no se realizó. Ops. Hubo un problema inesperado.");
             }
-            if (!empleado.ValidarApellido())
+            finally
             {
-                MessageBox.Show("Apellido inválido");
-                return;
-            }
-            if (!empleado.ValidarNombre())
-            {
-                MessageBox.Show("Nombre inválido");
-                return;
-            }
-            if (!empleado.ValidarFechaAlta())
-            {
-                MessageBox.Show("Fecha Alta inválida");
-                return;
-            }
-            if (!empleado.ValidarFechaBaja())
-            {
-                MessageBox.Show("Fecha Baja inválida");
-                return;
-            }
-
-            if (_empleadosRepositorio.Guardar(empleado))
-            {
-                MessageBox.Show("Se registro con éxito");
+                if (empleado == null)
+                    MessageBox.Show(mensaje.ToString());
                 this.Dispose();
             }
         }
 
+        //BTN CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (MessageBox.Show("Está seguro que desea salir?", "Salir", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                Dispose();
+        }
+
+        //CREA UN OBJETO CON LOS DATOS DEL FORM
+        private Empleado PrepararEmpleado()
+        {
+            // Agregar validaciones
+            var empleado = new Empleado()
+            {
+                legajo = int.Parse(txtLegajo.Text),
+                TiposDocumento = new TiposDocumento() { idTipoDocumento = int.Parse(cmbTipoDoc.SelectedValue.ToString()) },
+                nroDocumento = int.Parse(txtNroDocumento.Text),
+                apellido = txtApellido.Text,
+                nombre = txtNombre.Text,
+                idTipoEmpleado = new TiposEmpleado() { idTipoEmpleado = int.Parse(cmbTipoEmp.SelectedValue.ToString()) },
+                fechaAlta = DtpFechaAlta.Value.Date,
+                fechaBaja = DtpFechaBaja.Value.Date
+            };
+            return empleado;
         }
     }
 }

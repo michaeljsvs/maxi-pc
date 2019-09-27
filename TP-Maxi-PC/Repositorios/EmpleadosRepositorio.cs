@@ -11,20 +11,17 @@ namespace TP_Maxi_PC.Repositorios
 {
     class EmpleadosRepositorio
     {
-        // código adaptada de clase 01
-        /// <summary>
-        /// Solo ciertas ciertas clases tiene acceso a la BD
-        /// </summary>
-        private acceso_BD _BD;
-
         public EmpleadosRepositorio()
         {
-            _BD = acceso_BD.Singleton();
+
         }
 
+        //OBTENER TABLA Y CONVERTIRLA A LISTA
         public DataTable ObtenerEmpleadosDT()
         {
-            string sqltxt = "SELECT * FROM empleados";
+            string sqltxt = "SELECT e.legajo, td.nombre, e.nroDocumento, e.apellido, e.nombre, te.nombre, e.fechaAlta, e.fechaBaja " +
+            "FROM Empleados e INNER JOIN TiposDocumento td ON e.tipoDocumento = td.idTipoDocumento" +
+            " INNER JOIN TiposEmpleado te ON e.idTipoEmpleado = te.idTipoEmpleado";
 
             return acceso_BD.Singleton().consulta(sqltxt);
         }
@@ -48,11 +45,11 @@ namespace TP_Maxi_PC.Repositorios
                 DateTime.TryParse(fila.ItemArray[7]?.ToString(), out fecha1);
 
                 empleado.legajo = int.Parse(fila.ItemArray[0].ToString()); // Legajo
-                empleado.tipoDocumento = int.Parse(fila.ItemArray[1].ToString()); // Tipo Documento
+                empleado.TiposDocumento = new TiposDocumento() { nombre = fila.ItemArray[1].ToString() };// Nombre Tipo Documento
                 empleado.nroDocumento = int.Parse(fila.ItemArray[2].ToString()); // Nro Documento
                 empleado.apellido = fila.ItemArray[3].ToString(); // Apellido
                 empleado.nombre = fila.ItemArray[4].ToString(); // Nombre
-                empleado.idTipoEmpleado = int.Parse(fila.ItemArray[5].ToString()); // Id Tipo Empleado
+                empleado.idTipoEmpleado = new TiposEmpleado() { nombre = fila.ItemArray[5].ToString() }; // Nombre Tipo Empleado
                 empleado.fechaAlta = fecha; // Fecha Alta
                 empleado.fechaBaja = fecha1; // Fecha Baja
 
@@ -61,47 +58,53 @@ namespace TP_Maxi_PC.Repositorios
             return empleados;
         }
 
+        //GUARDAR (VER SI SE PUEDEN SACAR LOS SET IDENTITY AL ELIMINAR LAS PK)
         public bool Guardar(Empleado empleado)
         {
             string sqltxt = $"SET IDENTITY_INSERT [dbo].[Empleados] ON " +
                 $"INSERT [dbo].[Empleados] ([legajo], [tipoDocumento], [nroDocumento], [apellido], [nombre], [idTipoEmpleado], [fechaAlta], [fechaBaja]) " +
-                $"VALUES ('{empleado.legajo}', '{empleado.tipoDocumento}', '{empleado.nroDocumento}', '{empleado.apellido}', '{empleado.nombre}', '{empleado.idTipoEmpleado}', '{empleado.fechaAlta.ToString("yyyy-MM-dd")}', '{empleado.fechaBaja.ToString("yyyy-MM-dd")}')" +
+                $"VALUES ('{empleado.legajo}', '{empleado.TiposDocumento.idTipoDocumento}', '{empleado.nroDocumento}', '{empleado.apellido}', '{empleado.nombre}', '{empleado.idTipoEmpleado.idTipoEmpleado}', '{empleado.fechaAlta.ToString("yyyy-MM-dd")}', '{empleado.fechaBaja.ToString("yyyy-MM-dd")}')" +
                 $"SET IDENTITY_INSERT [dbo].[Empleados] OFF";
 
-            return _BD.EjecutarSQL(sqltxt);
+            return acceso_BD.Singleton().EjecutarSQL(sqltxt);
         }
 
+        //ACTUALIZAR
         public bool Actualizar(Empleado empleado)
         {
-            string sqltxt = $"UPDATE [dbo].[Empleados] SET tipoDocumento = '{empleado.tipoDocumento}'," +
-                $"nroDocumento = '{empleado.nroDocumento}', apellido= '{empleado.apellido}', nombre = '{empleado.nombre}', idTipoEmpleado = '{empleado.idTipoEmpleado}', fechaAlta = '{empleado.fechaAlta.ToString("yyyy-MM-dd")}', fechaBaja = '{empleado.fechaBaja.ToString("yyyy-MM-dd")}' WHERE legajo = {empleado.legajo}";
+            string sqltxt = $"UPDATE [dbo].[Empleados] SET tipoDocumento = '{empleado.TiposDocumento.idTipoDocumento}'," +
+                $"nroDocumento = '{empleado.nroDocumento}', apellido= '{empleado.apellido}', nombre = '{empleado.nombre}', idTipoEmpleado = '{empleado.idTipoEmpleado.idTipoEmpleado}', fechaAlta = '{empleado.fechaAlta.ToString("yyyy-MM-dd")}', fechaBaja = '{empleado.fechaBaja.ToString("yyyy-MM-dd")}' WHERE legajo = {empleado.legajo}";
 
-            return _BD.EjecutarSQL(sqltxt);
+            return acceso_BD.Singleton().EjecutarSQL(sqltxt);
         }
 
+        //ELIMINAR
         public bool Eliminar(string empleadoLeg)
         {
             string sqltxt = $"DELETE FROM [dbo].[Empleados] WHERE legajo = {empleadoLeg}";
 
-            return _BD.EjecutarSQL(sqltxt);
+            return acceso_BD.Singleton().EjecutarSQL(sqltxt);
         }
 
+        //OBTENER TABLA DE TIPODOCUMENTOS
         public DataTable ObtenerTipoDoc()
         {
-            string sqltxt = "SELECT * FROM TiposDocumento";
-            return _BD.consulta(sqltxt);
+            string sqltxt = "SELECT * FROM tiposDocumento";
+            return acceso_BD.Singleton().consulta(sqltxt);
         }
 
+        //OBTENER TABLA DE TIPOEMPLEADOS
         public DataTable ObtenerTipoEmpleado()
         {
-            string sqltxt = "SELECT * FROM TiposEmpleado";
-            return _BD.consulta(sqltxt);
+            string sqltxt = "SELECT * FROM tiposEmpleado";
+            return acceso_BD.Singleton().consulta(sqltxt);
         }
 
-        public Empleado ObtenerEmpleados(string empleadoLegajo)
+        //OBTENER UN OBJETO ESPECIFICO A TRAVES DE SU PK
+        public Empleado ObtenerEmpleado(string empleadoLegajo)
         {
             string sqltxt = $"SELECT * FROM [dbo].[Empleados] WHERE legajo = {empleadoLegajo}";
-            var tablaTemporal = _BD.consulta(sqltxt);
+            var tablaTemporal = acceso_BD.Singleton().consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)
                 return null;
@@ -121,18 +124,15 @@ namespace TP_Maxi_PC.Repositorios
                 DateTime.TryParse(fila.ItemArray[7]?.ToString(), out fecha1);
 
                 empleado.legajo = int.Parse(fila.ItemArray[0].ToString()); // Legajo
-                empleado.tipoDocumento = int.Parse(fila.ItemArray[1].ToString()); // Tipo Documento
+                empleado.TiposDocumento = new TiposDocumento() { idTipoDocumento = int.Parse(fila.ItemArray[1].ToString()) };// Tipo Documento
                 empleado.nroDocumento = int.Parse(fila.ItemArray[2].ToString()); // Nro Documento
                 empleado.apellido = fila.ItemArray[3].ToString(); // Apellido
                 empleado.nombre = fila.ItemArray[4].ToString(); // Nombre
-                empleado.idTipoEmpleado = int.Parse(fila.ItemArray[5].ToString()); // Id Tipo Empleado
+                empleado.idTipoEmpleado = new TiposEmpleado() { idTipoEmpleado = int.Parse(fila.ItemArray[5].ToString()) }; // Id Tipo Empleado
                 empleado.fechaAlta = fecha; // Fecha Alta
                 empleado.fechaBaja = fecha1; // Fecha Baja
             }
-
             return empleado;
         }
-
-
     }
 }

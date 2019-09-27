@@ -146,6 +146,8 @@
     <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\Empleado.cs" />
+    <Compile Include="Modelos\TiposDocumento.cs" />
+    <Compile Include="Modelos\TiposEmpleado.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +162,7 @@
     <Compile Include="Repositorios\ModelosRepositorio.cs" />
     <Compile Include="Repositorios\PCRepositorio.cs" />
     <Compile Include="Repositorios\TiposCompRepositorio.cs" />
+    <Compile Include="Repositorios\TiposDocumentoRepositorio.cs" />
     <Compile Include="Repositorios\TiposPCRepositorio.cs" />
     <Compile Include="Repositorios\ClientesRepositorio.cs" />
     <EmbeddedResource Include="ABM\Agregar_Cliente.resx">

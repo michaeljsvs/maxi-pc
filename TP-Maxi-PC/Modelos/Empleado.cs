@@ -10,7 +10,7 @@ namespace TP_Maxi_PC.Modelos
     {
         public int legajo { get; set; }
 
-        public int tipoDocumento { get; set; }
+        public TiposDocumento TiposDocumento { get; set; }
 
         public int nroDocumento { get; set; }
 
@@ -18,7 +18,7 @@ namespace TP_Maxi_PC.Modelos
 
         public string nombre { get; set; }
 
-        public int idTipoEmpleado { get; set; }
+        public TiposEmpleado idTipoEmpleado { get; set; }
 
         public DateTime fechaAlta { get; set; }
 
@@ -31,20 +31,13 @@ namespace TP_Maxi_PC.Modelos
             return false;
         }
 
-        public bool ValidarTipoDocumento()
-        {
-            if (tipoDocumento >= 0 && tipoDocumento < 100)
-                return true;
-            return false;
-        }
-
         public bool ValidarNroDocumento()
         {
             if (nroDocumento >= 0 && nroDocumento < 100000000)
                 return true;
             return false;
         }
-        
+
 
         public bool ValidarApellido()
         {
@@ -56,13 +49,6 @@ namespace TP_Maxi_PC.Modelos
         public bool ValidarNombre()
         {
             if (!string.IsNullOrEmpty(nombre) && nombre.Length < 51)
-                return true;
-            return false;
-        }
-
-        public bool ValidarIdTipoEmpleado()
-        {
-            if (idTipoEmpleado >= 0 && idTipoEmpleado < 100)
                 return true;
             return false;
         }
