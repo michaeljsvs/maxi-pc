@@ -110,6 +110,7 @@
             this.btn_Modificar.TabIndex = 23;
             this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // btn_Salir
             // 
@@ -119,6 +120,7 @@
             this.btn_Salir.TabIndex = 33;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = true;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // txtNombre
             // 

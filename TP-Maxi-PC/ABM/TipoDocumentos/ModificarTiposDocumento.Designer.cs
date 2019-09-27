@@ -59,6 +59,7 @@
             this.btn_Cargar.TabIndex = 15;
             this.btn_Cargar.Text = "Cargar";
             this.btn_Cargar.UseVisualStyleBackColor = true;
+            this.btn_Cargar.Click += new System.EventHandler(this.btn_Cargar_Click_1);
             // 
             // txtNombre
             // 
@@ -101,6 +102,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ModificarTiposDocumento";
             this.Text = "ModificarTiposDocumento";
+            this.Load += new System.EventHandler(this.ModificarTiposDocumento_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

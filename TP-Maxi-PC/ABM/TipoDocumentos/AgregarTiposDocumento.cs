@@ -80,24 +80,24 @@ namespace TP_Maxi_PC.ABM.TipoDocumentos
             }
         }
 
-        ////BTN MODIFICAR
-        //private void btnModificar_Click(object sender, EventArgs e)
-        //{
-        //    var seleccionadas = dgv_TiposDocumento.SelectedRows;
-        //    if (seleccionadas.Count == 0 || seleccionadas.Count > 1)
-        //    {
-        //        MessageBox.Show("Debe seleccionar una fila");
-        //        return;
-        //    }
-        //    foreach (DataGridViewRow fila in seleccionadas)
-        //    {
-        //        var id_TipoDoc = fila.Cells[0].Value;
+        //BTN MODIFICAR
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            var seleccionadas = dgv_TiposDocumento.SelectedRows;
+            if (seleccionadas.Count == 0 || seleccionadas.Count > 1)
+            {
+                MessageBox.Show("Debe seleccionar una fila");
+                return;
+            }
+            foreach (DataGridViewRow fila in seleccionadas)
+            {
+                var id_TipoDoc = fila.Cells[0].Value;
 
-        //        var ventana = new ModificarTiposDocumento(id_TipoDoc.ToString());
-        //        ventana.ShowDialog();
-        //        ActualizarTiposDocumento();
-        //    }
-        //}
+                var ventana = new ModificarTiposDocumento(id_TipoDoc.ToString());
+                ventana.ShowDialog();
+                ActualizarTiposDocumento();
+            }
+        }
 
         //BTN ACTUALIZAR
         private void btn_Actualizar_Click(object sender, EventArgs e)
@@ -137,7 +137,7 @@ namespace TP_Maxi_PC.ABM.TipoDocumentos
         }
 
         //BTN CANCELAR
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btn_Salir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Está seguro que desea salir?", "Salir", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 Dispose();
@@ -153,7 +153,5 @@ namespace TP_Maxi_PC.ABM.TipoDocumentos
             };
             return tiposDocumento;
         }
-
-        
     }
 }
