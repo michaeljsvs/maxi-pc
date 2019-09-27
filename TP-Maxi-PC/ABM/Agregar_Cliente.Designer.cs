@@ -39,6 +39,16 @@
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
             this.dgv_Clientes = new System.Windows.Forms.DataGridView();
+            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroCaller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idBarrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Cargar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,17 +61,8 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nroCaller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idBarrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1Modificar = new System.Windows.Forms.Button();
+            this.btn_AgregarBarrio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,6 +178,69 @@
             this.dgv_Clientes.TabIndex = 19;
             this.dgv_Clientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Clientes_CellContentClick);
             // 
+            // idCliente
+            // 
+            this.idCliente.HeaderText = "ID";
+            this.idCliente.Name = "idCliente";
+            this.idCliente.ReadOnly = true;
+            this.idCliente.Width = 50;
+            // 
+            // tipoDocumento
+            // 
+            this.tipoDocumento.HeaderText = "Tipo Documento";
+            this.tipoDocumento.Name = "tipoDocumento";
+            this.tipoDocumento.ReadOnly = true;
+            // 
+            // nroDocumento
+            // 
+            this.nroDocumento.HeaderText = "Documento";
+            this.nroDocumento.Name = "nroDocumento";
+            this.nroDocumento.ReadOnly = true;
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // sexo
+            // 
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
+            this.sexo.Width = 50;
+            // 
+            // fechaIngreso
+            // 
+            this.fechaIngreso.HeaderText = "Fecha Ingreso";
+            this.fechaIngreso.Name = "fechaIngreso";
+            this.fechaIngreso.ReadOnly = true;
+            // 
+            // calle
+            // 
+            this.calle.HeaderText = "Calle";
+            this.calle.Name = "calle";
+            this.calle.ReadOnly = true;
+            // 
+            // nroCaller
+            // 
+            this.nroCaller.HeaderText = "Numero Calle";
+            this.nroCaller.Name = "nroCaller";
+            this.nroCaller.ReadOnly = true;
+            this.nroCaller.Width = 50;
+            // 
+            // idBarrio
+            // 
+            this.idBarrio.HeaderText = "Barrio";
+            this.idBarrio.Name = "idBarrio";
+            this.idBarrio.ReadOnly = true;
+            // 
             // btn_Cargar
             // 
             this.btn_Cargar.Location = new System.Drawing.Point(502, 122);
@@ -285,69 +349,6 @@
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click_1);
             // 
-            // idCliente
-            // 
-            this.idCliente.HeaderText = "ID";
-            this.idCliente.Name = "idCliente";
-            this.idCliente.ReadOnly = true;
-            this.idCliente.Width = 50;
-            // 
-            // tipoDocumento
-            // 
-            this.tipoDocumento.HeaderText = "Tipo Documento";
-            this.tipoDocumento.Name = "tipoDocumento";
-            this.tipoDocumento.ReadOnly = true;
-            // 
-            // nroDocumento
-            // 
-            this.nroDocumento.HeaderText = "Documento";
-            this.nroDocumento.Name = "nroDocumento";
-            this.nroDocumento.ReadOnly = true;
-            // 
-            // apellido
-            // 
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // sexo
-            // 
-            this.sexo.HeaderText = "Sexo";
-            this.sexo.Name = "sexo";
-            this.sexo.ReadOnly = true;
-            this.sexo.Width = 50;
-            // 
-            // fechaIngreso
-            // 
-            this.fechaIngreso.HeaderText = "Fecha Ingreso";
-            this.fechaIngreso.Name = "fechaIngreso";
-            this.fechaIngreso.ReadOnly = true;
-            // 
-            // calle
-            // 
-            this.calle.HeaderText = "Calle";
-            this.calle.Name = "calle";
-            this.calle.ReadOnly = true;
-            // 
-            // nroCaller
-            // 
-            this.nroCaller.HeaderText = "Numero Calle";
-            this.nroCaller.Name = "nroCaller";
-            this.nroCaller.ReadOnly = true;
-            this.nroCaller.Width = 50;
-            // 
-            // idBarrio
-            // 
-            this.idBarrio.HeaderText = "Barrio";
-            this.idBarrio.Name = "idBarrio";
-            this.idBarrio.ReadOnly = true;
-            // 
             // button1Modificar
             // 
             this.button1Modificar.Location = new System.Drawing.Point(752, 127);
@@ -358,11 +359,22 @@
             this.button1Modificar.UseVisualStyleBackColor = true;
             this.button1Modificar.Click += new System.EventHandler(this.button1Modificar_Click);
             // 
+            // btn_AgregarBarrio
+            // 
+            this.btn_AgregarBarrio.Location = new System.Drawing.Point(488, 45);
+            this.btn_AgregarBarrio.Name = "btn_AgregarBarrio";
+            this.btn_AgregarBarrio.Size = new System.Drawing.Size(21, 21);
+            this.btn_AgregarBarrio.TabIndex = 28;
+            this.btn_AgregarBarrio.Text = "+";
+            this.btn_AgregarBarrio.UseVisualStyleBackColor = true;
+            this.btn_AgregarBarrio.Click += new System.EventHandler(this.btn_AgregarBarrio_Click);
+            // 
             // Agregar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 407);
+            this.Controls.Add(this.btn_AgregarBarrio);
             this.Controls.Add(this.button1Modificar);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.dateTimePicker1);
@@ -432,5 +444,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nroCaller;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBarrio;
         private System.Windows.Forms.Button button1Modificar;
+        private System.Windows.Forms.Button btn_AgregarBarrio;
     }
 }

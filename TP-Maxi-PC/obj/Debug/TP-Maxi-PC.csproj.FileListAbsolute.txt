@@ -206,3 +206,5 @@ C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP_M
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoDocumentos.ModificarTiposDocumento.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoEmpleados.AgregarTiposEmpleado.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoEmpleados.ModificarTiposEmpleados.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Barrios.AgregarBarrio.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\BSMaxi\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Barrios.ModificarBarrio.resources

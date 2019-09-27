@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Collections;
 using TP_Maxi_PC.Repositorios;
 using TP_Maxi_PC.ABM;
+using TP_Maxi_PC.ABM.Barrios;
 
 namespace TP_Maxi_PC
 {
@@ -223,6 +224,12 @@ namespace TP_Maxi_PC
                 ActualizarClientes();
             }
             
+        }
+
+        private void btn_AgregarBarrio_Click(object sender, EventArgs e)
+        {
+            AgregarBarrio nuevo = new AgregarBarrio();
+            nuevo.Show();
         }
     }
 }
