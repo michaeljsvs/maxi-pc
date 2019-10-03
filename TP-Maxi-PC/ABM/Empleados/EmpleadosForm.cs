@@ -97,7 +97,14 @@ namespace TP_Maxi_PC.ABM.Empleados
                 if (empleado == null)
                     MessageBox.Show(mensaje.ToString());
             }
+            txtLegajo.Clear();
+            cmbTipoDoc.SelectedIndex = 0;
+            txtNroDocumento.Clear();
+            txtApellido.Clear();
+            txtNombre.Clear();
+            cmbTipoEmp.SelectedIndex = 0;
             ActualizarEmpleados();
+            txtLegajo.Focus();
         }
 
         //BTN ELIMINAR
@@ -174,6 +181,27 @@ namespace TP_Maxi_PC.ABM.Empleados
         //CREA UN OBJETO CON LOS DATOS DEL FORM
         private Empleado PrepararEmpleado()
         {
+            if (String.IsNullOrEmpty(txtLegajo.Text))
+            {
+                MessageBox.Show("Legajo vacio");
+                return null;
+            }
+            if (String.IsNullOrEmpty(txtNroDocumento.Text))
+            {
+                MessageBox.Show("Nro Documento vacio");
+                return null;
+            }
+            if (String.IsNullOrEmpty(txtApellido.Text))
+            {
+                MessageBox.Show("Apellido vacio");
+                return null;
+            }
+            if (String.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("Nombre vacio");
+                return null;
+            }
+
             // Agregar validaciones
             var empleado = new Empleado()
             {
@@ -186,7 +214,68 @@ namespace TP_Maxi_PC.ABM.Empleados
                 fechaAlta = DtpFechaAlta.Value.Date,
                 fechaBaja = DtpFechaBaja.Value.Date
             };
+            
+            if (!empleado.ValidarApellido())
+            {
+                MessageBox.Show("Apellido inválido");
+                return null;
+            }
+            if (!empleado.ValidarNombre())
+            {
+                MessageBox.Show("Nombre inválido");
+                return null;
+            }
+            if (!empleado.ValidarFechaAlta())
+            {
+                MessageBox.Show("Fecha Alta inválida");
+                return null;
+            }
+            if (!empleado.ValidarFechaBaja())
+            {
+                MessageBox.Show("Fecha Baja inválida");
+                return null;
+            }
             return empleado;
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

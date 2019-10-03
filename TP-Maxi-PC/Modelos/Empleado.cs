@@ -24,31 +24,16 @@ namespace TP_Maxi_PC.Modelos
 
         public DateTime fechaBaja { get; set; }
 
-        public bool ValidarLegajo()
-        {
-            if (legajo >= 0 && legajo < 100000)
-                return true;
-            return false;
-        }
-
-        public bool ValidarNroDocumento()
-        {
-            if (nroDocumento >= 0 && nroDocumento < 100000000)
-                return true;
-            return false;
-        }
-
-
         public bool ValidarApellido()
         {
-            if (!string.IsNullOrEmpty(apellido) && apellido.Length < 51)
+            if (apellido.Length < 30)
                 return true;
             return false;
         }
 
         public bool ValidarNombre()
         {
-            if (!string.IsNullOrEmpty(nombre) && nombre.Length < 51)
+            if (!string.IsNullOrEmpty(nombre) && nombre.Length < 30)
                 return true;
             return false;
         }
@@ -62,7 +47,7 @@ namespace TP_Maxi_PC.Modelos
 
         public bool ValidarFechaBaja()
         {
-            if (fechaBaja != DateTime.MinValue && fechaBaja < DateTime.Today)
+            if (fechaBaja != DateTime.MinValue && fechaBaja >= DateTime.Today)
                 return true;
             return false;
         }

@@ -232,7 +232,6 @@ C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.ModificarComponente.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EditarEmpleadoForm.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EmpleadosForm.resources
-C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.FormNuevoEmpleado.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Marcas.AgregarMarca.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Marcas.ModificarMarcas.resources
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modelos.AgregarModelo.resources

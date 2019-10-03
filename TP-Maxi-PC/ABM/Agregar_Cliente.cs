@@ -231,5 +231,6 @@ namespace TP_Maxi_PC
             AgregarBarrio nuevo = new AgregarBarrio();
             nuevo.ShowDialog();
         }
+        
     }
 }
