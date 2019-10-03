@@ -218,3 +218,35 @@ C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\michaeljsvs\max
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoDocumentos.ModificarTiposDocumento.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoEmpleados.AgregarTiposEmpleado.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\michaeljsvs\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoEmpleados.ModificarTiposEmpleados.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe.config
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.exe
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\bin\Debug\TP-Maxi-PC.pdb
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csprojAssemblyReference.cache
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_Cliente.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoComp.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Agregar_PC.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoPC.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Barrios.AgregarBarrio.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Barrios.ModificarBarrio.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.Agregar_Componente.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.ModificarComponente.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EditarEmpleadoForm.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EmpleadosForm.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.FormNuevoEmpleado.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Marcas.AgregarMarca.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Marcas.ModificarMarcas.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modelos.AgregarModelo.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modelos.ModificarModelo.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_Cliente.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoComp.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoPC.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoDocumentos.AgregarTiposDocumento.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoDocumentos.ModificarTiposDocumento.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoEmpleados.AgregarTiposEmpleado.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoEmpleados.ModificarTiposEmpleados.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Principal.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.Properties.Resources.resources
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.GenerateResource.cache
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
+C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi-Pc\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb

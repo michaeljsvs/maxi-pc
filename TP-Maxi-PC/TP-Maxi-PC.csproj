@@ -106,12 +106,6 @@
     <Compile Include="ABM\Empleados\EmpleadosForm.Designer.cs">
       <DependentUpon>EmpleadosForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ABM\Empleados\FormNuevoEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ABM\Empleados\FormNuevoEmpleado.Designer.cs">
-      <DependentUpon>FormNuevoEmpleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="ABM\Marcas\AgregarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,9 +227,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ABM\Empleados\EmpleadosForm.resx">
       <DependentUpon>EmpleadosForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ABM\Empleados\FormNuevoEmpleado.resx">
-      <DependentUpon>FormNuevoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ABM\Marcas\AgregarMarca.resx">
       <DependentUpon>AgregarMarca.cs</DependentUpon>
