@@ -97,14 +97,7 @@ namespace TP_Maxi_PC.ABM.Empleados
                 if (empleado == null)
                     MessageBox.Show(mensaje.ToString());
             }
-            txtLegajo.Clear();
-            cmbTipoDoc.SelectedIndex = 0;
-            txtNroDocumento.Clear();
-            txtApellido.Clear();
-            txtNombre.Clear();
-            cmbTipoEmp.SelectedIndex = 0;
             ActualizarEmpleados();
-            txtLegajo.Focus();
         }
 
         //BTN ELIMINAR
@@ -276,6 +269,19 @@ namespace TP_Maxi_PC.ABM.Empleados
             {
                 e.Handled = true;
             }
+        }
+
+        //LIMPIAR
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtLegajo.Clear();
+            cmbTipoDoc.SelectedIndex = 0;
+            txtNroDocumento.Clear();
+            txtApellido.Clear();
+            txtNombre.Clear();
+            cmbTipoEmp.SelectedIndex = 0;
+            ActualizarEmpleados();
+            txtLegajo.Focus();
         }
     }
 }

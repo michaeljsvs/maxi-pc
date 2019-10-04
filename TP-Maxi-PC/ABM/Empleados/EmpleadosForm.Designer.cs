@@ -58,6 +58,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtLegajo = new System.Windows.Forms.MaskedTextBox();
             this.txtNroDocumento = new System.Windows.Forms.MaskedTextBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -307,11 +308,22 @@
             this.txtNroDocumento.TabIndex = 2;
             this.txtNroDocumento.ValidatingType = typeof(int);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(749, 86);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 31;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // EmpleadosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 441);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txtNroDocumento);
             this.Controls.Add(this.txtLegajo);
             this.Controls.Add(this.btnCancelar);
@@ -376,5 +388,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MaskedTextBox txtLegajo;
         private System.Windows.Forms.MaskedTextBox txtNroDocumento;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
