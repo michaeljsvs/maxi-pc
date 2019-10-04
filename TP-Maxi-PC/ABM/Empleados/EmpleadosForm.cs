@@ -208,7 +208,7 @@ namespace TP_Maxi_PC.ABM.Empleados
                 legajo = int.Parse(txtLegajo.Text),
                 TiposDocumento = new TiposDocumento() { idTipoDocumento = int.Parse(cmbTipoDoc.SelectedValue.ToString()) },
                 nroDocumento = int.Parse(txtNroDocumento.Text),
-                apellido = txtApellido.Text,
+                apellido = txtApellido.Text.Trim(),
                 nombre = txtNombre.Text,
                 idTipoEmpleado = new TiposEmpleado() { idTipoEmpleado = int.Parse(cmbTipoEmp.SelectedValue.ToString()) },
                 fechaAlta = DtpFechaAlta.Value.Date,

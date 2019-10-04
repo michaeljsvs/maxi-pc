@@ -26,7 +26,7 @@ namespace TP_Maxi_PC.Modelos
 
         public bool ValidarApellido()
         {
-            if (apellido.Length < 30)
+            if (!string.IsNullOrEmpty(apellido) && apellido.Length < 30)
                 return true;
             return false;
         }
