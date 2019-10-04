@@ -61,10 +61,11 @@ namespace TP_Maxi_PC.Repositorios
         //GUARDAR (VER SI SE PUEDEN SACAR LOS SET IDENTITY AL ELIMINAR LAS PK)
         public bool Guardar(Empleado empleado)
         {
-            string sqltxt = $"SET IDENTITY_INSERT [dbo].[Empleados] ON " +
-                $"INSERT [dbo].[Empleados] ([legajo], [tipoDocumento], [nroDocumento], [apellido], [nombre], [idTipoEmpleado], [fechaAlta], [fechaBaja]) " +
-                $"VALUES ('{empleado.legajo}', '{empleado.TiposDocumento.idTipoDocumento}', '{empleado.nroDocumento}', '{empleado.apellido}', '{empleado.nombre}', '{empleado.idTipoEmpleado.idTipoEmpleado}', '{empleado.fechaAlta.ToString("yyyy-MM-dd")}', '{empleado.fechaBaja.ToString("yyyy-MM-dd")}')" +
-                $"SET IDENTITY_INSERT [dbo].[Empleados] OFF";
+            string sqltxt = $"INSERT [dbo].[Empleados] ([tipoDocumento], [nroDocumento], [apellido], [nombre], [idTipoEmpleado], [fechaAlta], [fechaBaja]) " +
+                $"VALUES ('{empleado.TiposDocumento.idTipoDocumento}', '{empleado.nroDocumento}', " +
+                $"'{empleado.apellido}', '{empleado.nombre}', '{empleado.idTipoEmpleado.idTipoEmpleado}', " +
+                $"'{empleado.fechaAlta.ToString("yyyy-MM-dd")}', '{empleado.fechaBaja.ToString("yyyy-MM-dd")}')";
+                
 
             return acceso_BD.Singleton().EjecutarSQL(sqltxt);
         }
