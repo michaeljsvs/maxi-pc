@@ -41,14 +41,11 @@
             this.tiposComponenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposPCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPc = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnEmpleados = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +56,7 @@
             this.administrarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(311, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(828, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -148,76 +145,6 @@
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ADMINISTRACIÓN";
-            // 
-            // btnPc
-            // 
-            this.btnPc.Image = ((System.Drawing.Image)(resources.GetObject("btnPc.Image")));
-            this.btnPc.Location = new System.Drawing.Point(69, 100);
-            this.btnPc.Name = "btnPc";
-            this.btnPc.Size = new System.Drawing.Size(90, 90);
-            this.btnPc.TabIndex = 3;
-            this.btnPc.UseVisualStyleBackColor = true;
-            this.btnPc.Click += new System.EventHandler(this.btnPc_Click);
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
-            this.btnCliente.Location = new System.Drawing.Point(159, 100);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(90, 90);
-            this.btnCliente.TabIndex = 3;
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(165, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Clientes";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(99, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "PC";
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.Image")));
-            this.btnEmpleados.Location = new System.Drawing.Point(69, 224);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(94, 81);
-            this.btnEmpleados.TabIndex = 7;
-            this.btnEmpleados.UseVisualStyleBackColor = true;
-            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(65, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Empleados";
-            // 
             // modelosToolStripMenuItem
             // 
             this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
@@ -225,15 +152,55 @@
             this.modelosToolStripMenuItem.Text = "Modelos";
             this.modelosToolStripMenuItem.Click += new System.EventHandler(this.modelosToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(225, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(386, 32);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ADMINISTRACIÓN GENERAL";
+            // 
+            // btnPc
+            // 
+            this.btnPc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPc.Image = ((System.Drawing.Image)(resources.GetObject("btnPc.Image")));
+            this.btnPc.Location = new System.Drawing.Point(12, 69);
+            this.btnPc.Name = "btnPc";
+            this.btnPc.Size = new System.Drawing.Size(250, 120);
+            this.btnPc.TabIndex = 3;
+            this.btnPc.UseVisualStyleBackColor = true;
+            this.btnPc.Click += new System.EventHandler(this.btnPc_Click);
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
+            this.btnCliente.Location = new System.Drawing.Point(564, 69);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(250, 120);
+            this.btnCliente.TabIndex = 3;
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.Image")));
+            this.btnEmpleados.Location = new System.Drawing.Point(268, 69);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(290, 120);
+            this.btnEmpleados.TabIndex = 7;
+            this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 317);
+            this.ClientSize = new System.Drawing.Size(828, 197);
             this.Controls.Add(this.btnEmpleados);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnPc);
             this.Controls.Add(this.label1);
@@ -260,12 +227,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPc;
         private System.Windows.Forms.Button btnCliente;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposPCToolStripMenuItem;
         private System.Windows.Forms.Button btnEmpleados;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem tiposComponenteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem componentesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;

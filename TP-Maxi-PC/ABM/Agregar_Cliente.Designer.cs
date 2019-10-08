@@ -33,10 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApe = new System.Windows.Forms.TextBox();
-            this.txtDoc = new System.Windows.Forms.TextBox();
-            this.txtCalle = new System.Windows.Forms.TextBox();
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
             this.dgv_Clientes = new System.Windows.Forms.DataGridView();
             this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,13 +52,17 @@
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtNroCalle = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.button1Modificar = new System.Windows.Forms.Button();
             this.btn_AgregarBarrio = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.MaskedTextBox();
+            this.txtApe = new System.Windows.Forms.MaskedTextBox();
+            this.txtDoc = new System.Windows.Forms.MaskedTextBox();
+            this.txtCalle = new System.Windows.Forms.MaskedTextBox();
+            this.txtNroCalle = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,38 +110,6 @@
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Calle:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(65, 19);
-            this.txtNombre.MaxLength = 32;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(146, 20);
-            this.txtNombre.TabIndex = 0;
-            // 
-            // txtApe
-            // 
-            this.txtApe.Location = new System.Drawing.Point(65, 46);
-            this.txtApe.MaxLength = 32;
-            this.txtApe.Name = "txtApe";
-            this.txtApe.Size = new System.Drawing.Size(146, 20);
-            this.txtApe.TabIndex = 1;
-            // 
-            // txtDoc
-            // 
-            this.txtDoc.Location = new System.Drawing.Point(83, 71);
-            this.txtDoc.MaxLength = 9;
-            this.txtDoc.Name = "txtDoc";
-            this.txtDoc.Size = new System.Drawing.Size(128, 20);
-            this.txtDoc.TabIndex = 2;
-            // 
-            // txtCalle
-            // 
-            this.txtCalle.Location = new System.Drawing.Point(336, 71);
-            this.txtCalle.MaxLength = 32;
-            this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(146, 20);
-            this.txtCalle.TabIndex = 7;
             // 
             // cmbBarrio
             // 
@@ -306,13 +274,6 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Nro. Calle:";
             // 
-            // txtNroCalle
-            // 
-            this.txtNroCalle.Location = new System.Drawing.Point(356, 98);
-            this.txtNroCalle.Name = "txtNroCalle";
-            this.txtNroCalle.Size = new System.Drawing.Size(126, 20);
-            this.txtNroCalle.TabIndex = 8;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -369,18 +330,63 @@
             this.btn_AgregarBarrio.UseVisualStyleBackColor = true;
             this.btn_AgregarBarrio.Click += new System.EventHandler(this.btn_AgregarBarrio_Click);
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(65, 22);
+            this.txtNombre.Mask = "Aaaaaaaaaaaaaaaaaaa";
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(146, 20);
+            this.txtNombre.TabIndex = 29;
+            // 
+            // txtApe
+            // 
+            this.txtApe.Location = new System.Drawing.Point(65, 46);
+            this.txtApe.Mask = "Aaaaaaaaaaaaaaaaaaa";
+            this.txtApe.Name = "txtApe";
+            this.txtApe.Size = new System.Drawing.Size(146, 20);
+            this.txtApe.TabIndex = 30;
+            // 
+            // txtDoc
+            // 
+            this.txtDoc.Location = new System.Drawing.Point(83, 71);
+            this.txtDoc.Mask = "99999999";
+            this.txtDoc.Name = "txtDoc";
+            this.txtDoc.Size = new System.Drawing.Size(128, 20);
+            this.txtDoc.TabIndex = 31;
+            this.txtDoc.ValidatingType = typeof(int);
+            // 
+            // txtCalle
+            // 
+            this.txtCalle.Location = new System.Drawing.Point(332, 72);
+            this.txtCalle.Mask = "Aaaaaaaaaaaaaaaaaaaaa";
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(150, 20);
+            this.txtCalle.TabIndex = 32;
+            // 
+            // txtNroCalle
+            // 
+            this.txtNroCalle.Location = new System.Drawing.Point(355, 100);
+            this.txtNroCalle.Mask = "99999";
+            this.txtNroCalle.Name = "txtNroCalle";
+            this.txtNroCalle.Size = new System.Drawing.Size(127, 20);
+            this.txtNroCalle.TabIndex = 33;
+            // 
             // Agregar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 407);
+            this.Controls.Add(this.txtNroCalle);
+            this.Controls.Add(this.txtCalle);
+            this.Controls.Add(this.txtDoc);
+            this.Controls.Add(this.txtApe);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btn_AgregarBarrio);
             this.Controls.Add(this.button1Modificar);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbSexo);
@@ -390,10 +396,6 @@
             this.Controls.Add(this.btn_Cargar);
             this.Controls.Add(this.dgv_Clientes);
             this.Controls.Add(this.cmbBarrio);
-            this.Controls.Add(this.txtCalle);
-            this.Controls.Add(this.txtDoc);
-            this.Controls.Add(this.txtApe);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -415,10 +417,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApe;
-        private System.Windows.Forms.TextBox txtDoc;
-        private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.ComboBox cmbBarrio;
         private System.Windows.Forms.DataGridView dgv_Clientes;
         private System.Windows.Forms.Button btn_Cargar;
@@ -428,7 +426,6 @@
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtNroCalle;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -445,5 +442,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idBarrio;
         private System.Windows.Forms.Button button1Modificar;
         private System.Windows.Forms.Button btn_AgregarBarrio;
+        private System.Windows.Forms.MaskedTextBox txtNombre;
+        private System.Windows.Forms.MaskedTextBox txtApe;
+        private System.Windows.Forms.MaskedTextBox txtDoc;
+        private System.Windows.Forms.MaskedTextBox txtCalle;
+        private System.Windows.Forms.MaskedTextBox txtNroCalle;
     }
 }

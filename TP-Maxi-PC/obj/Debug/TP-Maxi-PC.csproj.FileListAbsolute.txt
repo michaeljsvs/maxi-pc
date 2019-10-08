@@ -117,7 +117,6 @@ C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Agregar_TipoPC.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EditarEmpleadoForm.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.EmpleadosForm.resources
-C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Empleados.FormNuevoEmpleado.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_Cliente.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoComp.resources
 C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modificar_TipoPC.resources
@@ -280,3 +279,15 @@ D:\michael\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.GenerateResource.cache
 D:\michael\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
 D:\michael\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
 D:\michael\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Barrios.AgregarBarrio.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Barrios.ModificarBarrio.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.Agregar_Componente.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Componentes.ModificarComponente.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Marcas.AgregarMarca.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Marcas.ModificarMarcas.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modelos.AgregarModelo.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.Modelos.ModificarModelo.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoDocumentos.AgregarTiposDocumento.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoDocumentos.ModificarTiposDocumento.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoEmpleados.AgregarTiposEmpleado.resources
+C:\Users\Braian Emanuel\Documents\Visual Studio 2017\Repositorio\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.ABM.TipoEmpleados.ModificarTiposEmpleados.resources

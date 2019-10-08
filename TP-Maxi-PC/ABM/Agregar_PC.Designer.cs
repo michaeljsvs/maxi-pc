@@ -53,6 +53,7 @@
             this.lblMarca = new System.Windows.Forms.Label();
             this.cmbTipoPC = new System.Windows.Forms.ComboBox();
             this.nuevaMarca = new System.Windows.Forms.Button();
+            this.agregarTipo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PC)).BeginInit();
             this.SuspendLayout();
@@ -283,6 +284,16 @@
             this.nuevaMarca.UseVisualStyleBackColor = true;
             this.nuevaMarca.Click += new System.EventHandler(this.nuevaMarca_Click);
             // 
+            // agregarTipo
+            // 
+            this.agregarTipo.Location = new System.Drawing.Point(190, 108);
+            this.agregarTipo.Name = "agregarTipo";
+            this.agregarTipo.Size = new System.Drawing.Size(21, 21);
+            this.agregarTipo.TabIndex = 7;
+            this.agregarTipo.Text = "+";
+            this.agregarTipo.UseVisualStyleBackColor = true;
+            this.agregarTipo.Click += new System.EventHandler(this.agregarTipo_Click);
+            // 
             // Agregar_PC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,6 +301,7 @@
             this.ClientSize = new System.Drawing.Size(790, 434);
             this.Controls.Add(this.nuevaMarca);
             this.Controls.Add(this.button1Modelo);
+            this.Controls.Add(this.agregarTipo);
             this.Controls.Add(this.agregarDueño);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btn_Salir);
@@ -344,5 +356,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPC;
         private System.Windows.Forms.DataGridViewTextBoxColumn desscripcion;
         private System.Windows.Forms.Button nuevaMarca;
+        private System.Windows.Forms.Button agregarTipo;
     }
 }

@@ -31,6 +31,12 @@ namespace TP_Maxi_PC.Repositorios
             return acceso_BD.Singleton().consulta(sql);
         }
 
+        public DataTable obtenerDGV()
+        {
+            string sql = "SELECT C.idCliente,T.nombre,C.nroDocumento,concat(C.nombre,' ', C.apellido) as final,C.sexo,C.fechaIngreso,C.calle,C.nroCalle,B.nombre FROM Clientes C JOIN tiposDocumento T ON T.idTipoDocumento = C.tipoDocumento JOIN Barrios B ON B.idBarrio = C.idBarrio";
+
+            return acceso_BD.Singleton().consulta(sql);
+        }
         public DataTable obtenerParaCombo()
         {
             string sql = "SELECT idCliente, concat(nombre,' ', apellido) as final FROM Clientes"; 

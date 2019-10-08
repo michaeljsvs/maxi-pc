@@ -13,6 +13,7 @@ using TP_Maxi_PC.ABM;
 using TP_Maxi_PC.ABM.Modelos;
 using TP_Maxi_PC.ABM.Marcas;
 
+
 namespace TP_Maxi_PC
 {
     public partial class Agregar_PC : Form
@@ -184,6 +185,12 @@ namespace TP_Maxi_PC
         {
             AgregarMarca nueva = new AgregarMarca();
             nueva.ShowDialog();
+        }
+
+        private void agregarTipo_Click(object sender, EventArgs e)
+        {
+            Agregar_TipoPC nuevo = new Agregar_TipoPC();
+            nuevo.ShowDialog();
         }
     }
 }

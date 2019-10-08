@@ -22,7 +22,7 @@ namespace TP_Maxi_PC.Repositorios
 
         public DataTable obtenerPC()
         {
-            string sql = "SELECT P.idPC,D.apellido as duenio, A.nombre as marca, O.nombre as modelo, T.descripcion AS TipoPC, P.descripcion FROM PCs P JOIN Marcas A ON P.idMarca = A.idMarca JOIN Modelos O ON P.idModelo = O.idModelo JOIN TiposPCS T ON T.idTipoPC = P.idTipoPC JOIN Clientes D ON D.idCliente = P.idDueño";
+            string sql = "SELECT P.idPC,concat (D.nombre, ' ' , D.apellido) as duenio, A.nombre as marca, O.nombre as modelo, T.descripcion AS TipoPC, P.descripcion FROM PCs P JOIN Marcas A ON P.idMarca = A.idMarca JOIN Modelos O ON P.idModelo = O.idModelo JOIN TiposPCS T ON T.idTipoPC = P.idTipoPC JOIN Clientes D ON D.idCliente = P.idDueño";
             return acceso_BD.Singleton().consulta(sql);
         }
 
