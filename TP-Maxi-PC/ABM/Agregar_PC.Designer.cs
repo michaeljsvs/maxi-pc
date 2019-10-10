@@ -54,6 +54,8 @@
             this.cmbTipoPC = new System.Windows.Forms.ComboBox();
             this.nuevaMarca = new System.Windows.Forms.Button();
             this.agregarTipo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PC)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +102,7 @@
             this.combo_Marca.Location = new System.Drawing.Point(63, 30);
             this.combo_Marca.Name = "combo_Marca";
             this.combo_Marca.Size = new System.Drawing.Size(121, 21);
-            this.combo_Marca.TabIndex = 1;
+            this.combo_Marca.TabIndex = 0;
             this.combo_Marca.SelectedIndexChanged += new System.EventHandler(this.cambioMarca);
             // 
             // combo_Dueño
@@ -192,7 +194,7 @@
             this.btn_Cargar.Location = new System.Drawing.Point(224, 170);
             this.btn_Cargar.Name = "btn_Cargar";
             this.btn_Cargar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cargar.TabIndex = 3;
+            this.btn_Cargar.TabIndex = 4;
             this.btn_Cargar.Text = "Cargar";
             this.btn_Cargar.UseVisualStyleBackColor = true;
             this.btn_Cargar.Click += new System.EventHandler(this.btn_Cargar_Click);
@@ -202,7 +204,7 @@
             this.btn_Salir.Location = new System.Drawing.Point(305, 170);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(75, 23);
-            this.btn_Salir.TabIndex = 4;
+            this.btn_Salir.TabIndex = 5;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = true;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
@@ -271,7 +273,7 @@
             this.cmbTipoPC.Location = new System.Drawing.Point(63, 109);
             this.cmbTipoPC.Name = "cmbTipoPC";
             this.cmbTipoPC.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoPC.TabIndex = 1;
+            this.cmbTipoPC.TabIndex = 3;
             this.cmbTipoPC.SelectedIndexChanged += new System.EventHandler(this.cambioMarca);
             // 
             // nuevaMarca
@@ -294,6 +296,26 @@
             this.agregarTipo.UseVisualStyleBackColor = true;
             this.agregarTipo.Click += new System.EventHandler(this.agregarTipo_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(622, 243);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btn_Modificar_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(703, 243);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Eliminar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
             // Agregar_PC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,6 +327,8 @@
             this.Controls.Add(this.agregarDueño);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btn_Salir);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Cargar);
             this.Controls.Add(this.dgv_PC);
             this.Controls.Add(this.combo_Dueño);
@@ -357,5 +381,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn desscripcion;
         private System.Windows.Forms.Button nuevaMarca;
         private System.Windows.Forms.Button agregarTipo;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

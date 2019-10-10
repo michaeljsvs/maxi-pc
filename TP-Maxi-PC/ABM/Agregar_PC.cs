@@ -173,24 +173,64 @@ namespace TP_Maxi_PC
         {
             Agregar_Cliente nuevo = new Agregar_Cliente();
             nuevo.ShowDialog();
+            actualizarDueños();
+
         }
 
         private void button1Modelo_Click(object sender, EventArgs e)
         {
             AgregarModelo nuevo = new AgregarModelo();
             nuevo.ShowDialog();
+            actualizarModelos();
         }
 
         private void nuevaMarca_Click(object sender, EventArgs e)
         {
             AgregarMarca nueva = new AgregarMarca();
             nueva.ShowDialog();
+            actualizarComboMarca();
         }
 
         private void agregarTipo_Click(object sender, EventArgs e)
         {
             Agregar_TipoPC nuevo = new Agregar_TipoPC();
             nuevo.ShowDialog();
+            actualizarTipoPC();
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            var seleccionadas = dgv_PC.SelectedRows;
+
+            foreach (DataGridViewRow fila in seleccionadas)
+            {
+                var id = fila.Cells[0].Value;
+                var duenio = fila.Cells[1].Value;
+                var confirmacion = MessageBox.Show($"Seguro que desea eliminar Equipo N°: {id} de: {duenio}?", "Confirmar Operación", MessageBoxButtons.YesNo);
+                if (confirmacion.Equals(DialogResult.No))
+                {
+                    return;
+                }
+                else
+                {
+                    pcrepo.borrarCliente(id.ToString());
+                    MessageBox.Show("Se elimino correctamente!");
+                    ActualizarPC();
+                }
+            }
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            var seleccionadas = dgv_PC.SelectedRows;
+            foreach (DataGridViewRow fila in seleccionadas)
+            {
+                var id = fila.Cells[0].Value.ToString();
+                var descripcion = fila.Cells[5].Value.ToString();
+                ModificarPC nuevo = new ModificarPC(id,descripcion);
+                nuevo.ShowDialog();
+                ActualizarPC();
+            }
         }
     }
 }

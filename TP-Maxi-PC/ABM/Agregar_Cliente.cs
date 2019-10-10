@@ -149,7 +149,7 @@ namespace TP_Maxi_PC
                             }
                             else
                             {
-                                clientesRepositorio.insertarCliente(txtNombre.Text,txtApe.Text,char.Parse(cmbSexo.SelectedValue.ToString()),dateTimePicker1.Value,txtCalle.Text,txtNroCalle.Text,cmbBarrio.SelectedIndex,cmbTipoDoc.SelectedIndex, System.Convert.ToInt32(txtDoc.Text));
+                                clientesRepositorio.insertarCliente(txtNombre.Text,txtApe.Text,char.Parse(cmbSexo.SelectedValue.ToString()),dateTimePicker1.Value,txtCalle.Text,txtNroCalle.Text,Int32.Parse(cmbBarrio.SelectedValue.ToString()),Int32.Parse(cmbTipoDoc.SelectedValue.ToString()), System.Convert.ToInt32(txtDoc.Text));
                                 //No se si se cambia de esta manera System.Convert.ToInt32(txtDoc.Text)
                                 //dgv_Clientes.Rows.Add(txtApe.Text.ToString(),txtNombre.Text.ToString(),txtDoc.Text.ToString(), cmbTipoDoc.SelectedValue.ToString(), cmbSexo.SelectedValue.ToString(), 
                                 //    txtFechaIng.Text.ToString(), cmbBarrio.SelectedValue.ToString(),txtCalle.Text.ToString(),txtNroCalle.Text.ToString());

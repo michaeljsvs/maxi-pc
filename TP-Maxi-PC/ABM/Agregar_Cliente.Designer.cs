@@ -224,7 +224,7 @@
             this.btn_Salir.Location = new System.Drawing.Point(833, 343);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(75, 23);
-            this.btn_Salir.TabIndex = 16;
+            this.btn_Salir.TabIndex = 12;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = true;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
@@ -298,14 +298,14 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(377, 19);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 25;
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // btn_Eliminar
             // 
             this.btn_Eliminar.Location = new System.Drawing.Point(833, 127);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Eliminar.TabIndex = 26;
+            this.btn_Eliminar.TabIndex = 11;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click_1);
@@ -315,7 +315,7 @@
             this.button1Modificar.Location = new System.Drawing.Point(752, 127);
             this.button1Modificar.Name = "button1Modificar";
             this.button1Modificar.Size = new System.Drawing.Size(75, 23);
-            this.button1Modificar.TabIndex = 27;
+            this.button1Modificar.TabIndex = 10;
             this.button1Modificar.Text = "Modificar";
             this.button1Modificar.UseVisualStyleBackColor = true;
             this.button1Modificar.Click += new System.EventHandler(this.button1Modificar_Click);
@@ -333,18 +333,18 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(65, 22);
-            this.txtNombre.Mask = "Aaaaaaaaaaaaaaaaaaa";
+            this.txtNombre.Mask = "LLLLLLLLLLLLLLLLLLLL";
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(146, 20);
-            this.txtNombre.TabIndex = 29;
+            this.txtNombre.TabIndex = 0;
             // 
             // txtApe
             // 
             this.txtApe.Location = new System.Drawing.Point(65, 46);
-            this.txtApe.Mask = "Aaaaaaaaaaaaaaaaaaa";
+            this.txtApe.Mask = "LLLLLLLLLLLLLLLLLLLL";
             this.txtApe.Name = "txtApe";
             this.txtApe.Size = new System.Drawing.Size(146, 20);
-            this.txtApe.TabIndex = 30;
+            this.txtApe.TabIndex = 1;
             // 
             // txtDoc
             // 
@@ -352,16 +352,16 @@
             this.txtDoc.Mask = "99999999";
             this.txtDoc.Name = "txtDoc";
             this.txtDoc.Size = new System.Drawing.Size(128, 20);
-            this.txtDoc.TabIndex = 31;
+            this.txtDoc.TabIndex = 2;
             this.txtDoc.ValidatingType = typeof(int);
             // 
             // txtCalle
             // 
             this.txtCalle.Location = new System.Drawing.Point(332, 72);
-            this.txtCalle.Mask = "Aaaaaaaaaaaaaaaaaaaaa";
+            this.txtCalle.Mask = "LLLLLLLLLLLLLLLLLLLL";
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(150, 20);
-            this.txtCalle.TabIndex = 32;
+            this.txtCalle.TabIndex = 7;
             // 
             // txtNroCalle
             // 
@@ -369,7 +369,7 @@
             this.txtNroCalle.Mask = "99999";
             this.txtNroCalle.Name = "txtNroCalle";
             this.txtNroCalle.Size = new System.Drawing.Size(127, 20);
-            this.txtNroCalle.TabIndex = 33;
+            this.txtNroCalle.TabIndex = 8;
             // 
             // Agregar_Cliente
             // 

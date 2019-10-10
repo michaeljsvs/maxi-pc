@@ -18,7 +18,7 @@ namespace TP_Maxi_PC.Helpers
 
         private readonly OleDbCommand cmd;
 
-        private readonly string cadena_conexion = "Provider=SQLNCLI11;workstation id=PAV-Maxi-PC.mssql.somee.com;" +
+        private readonly string cadena_conexion = "Provider=SQLOLEDB;workstation id=PAV-Maxi-PC.mssql.somee.com;" +
             "packet size=4096;user id=BraianEmanuel19_SQLLogin_1;pwd=6aef7thwh9;data source=PAV-Maxi-PC.mssql.somee.com;" +
             "persist security info=False;initial catalog=PAV-Maxi-PC";
 

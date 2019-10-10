@@ -65,6 +65,7 @@
             // DgvEmpleados
             // 
             this.DgvEmpleados.AllowUserToAddRows = false;
+            this.DgvEmpleados.AllowUserToDeleteRows = false;
             this.DgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.legajo,
@@ -76,7 +77,9 @@
             this.fechaAlta,
             this.fechaBaja});
             this.DgvEmpleados.Location = new System.Drawing.Point(9, 155);
+            this.DgvEmpleados.MultiSelect = false;
             this.DgvEmpleados.Name = "DgvEmpleados";
+            this.DgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvEmpleados.Size = new System.Drawing.Size(836, 234);
             this.DgvEmpleados.TabIndex = 11;
             // 

@@ -51,6 +51,18 @@ namespace TP_Maxi_PC.Repositorios
             string sql = $"INSERT [dbo].[Pcs] ([idDueño],[idMarca],[idModelo],[descripcion],[idTipoPC]) VALUES ('" + dueño + "','" + marca +"','" + modelo + "','" + descripcion +"','"+ tipoPC + "')"; 
             return BD.EjecutarSQL(sql);
         }
+
+        public void borrarCliente(string id)
+        {
+            string sql = "DELETE [dbo].[PCs] WHERE idPC = " + id;
+            BD.EjecutarSQL(sql);
+        }
+
+        public bool modificarPC(string id,int duenio,int marca, int modelo, string descripcion, int tipoPC)
+        {
+            string sql = $"UPDATE [dbo].[PCs] SET idDueño = {duenio}, idMarca = {marca}, idModelo = {modelo}, descripcion = '{descripcion}', idTipoPC = {tipoPC} WHERE idPC = {id}";
+            return BD.EjecutarSQL(sql);
+        }
         //public int obtenerID(string apellido)
         //{
         //    string sql = "SELECT idCliente FROM Clientes WHERE apellido = '" + apellido + "'";
