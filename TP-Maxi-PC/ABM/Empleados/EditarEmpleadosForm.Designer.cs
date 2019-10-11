@@ -39,37 +39,39 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.DtpFechaBaja = new System.Windows.Forms.DateTimePicker();
             this.DtpFechaAlta = new System.Windows.Forms.DateTimePicker();
-            this.txtNroDocumento = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtLegajo = new System.Windows.Forms.TextBox();
             this.btn_agregarTipoDoc = new System.Windows.Forms.Button();
             this.btn_agregarTipoEmp = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtLegajo = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNroDocumento = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // cmbTipoEmp
             // 
+            this.cmbTipoEmp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoEmp.FormattingEnabled = true;
-            this.cmbTipoEmp.Location = new System.Drawing.Point(121, 213);
+            this.cmbTipoEmp.Location = new System.Drawing.Point(115, 170);
             this.cmbTipoEmp.Name = "cmbTipoEmp";
             this.cmbTipoEmp.Size = new System.Drawing.Size(200, 21);
             this.cmbTipoEmp.TabIndex = 5;
             // 
             // cmbTipoDoc
             // 
+            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(121, 55);
+            this.cmbTipoDoc.Location = new System.Drawing.Point(115, 12);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(200, 21);
             this.cmbTipoDoc.TabIndex = 1;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(246, 316);
+            this.btnCancelar.Location = new System.Drawing.Point(240, 273);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 9;
@@ -79,7 +81,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(149, 316);
+            this.btnGuardar.Location = new System.Drawing.Point(143, 273);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 8;
@@ -90,7 +92,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 290);
+            this.label8.Location = new System.Drawing.Point(18, 247);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 36;
@@ -99,7 +101,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 255);
+            this.label7.Location = new System.Drawing.Point(18, 212);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 35;
@@ -108,7 +110,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 213);
+            this.label6.Location = new System.Drawing.Point(18, 170);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 34;
@@ -117,7 +119,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 177);
+            this.label5.Location = new System.Drawing.Point(18, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 37;
@@ -126,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 138);
+            this.label4.Location = new System.Drawing.Point(18, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 33;
@@ -135,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 99);
+            this.label3.Location = new System.Drawing.Point(18, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 32;
@@ -144,66 +146,45 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 58);
+            this.label2.Location = new System.Drawing.Point(18, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 31;
             this.label2.Text = "Tipo Documento";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Legajo";
-            // 
             // DtpFechaBaja
             // 
-            this.DtpFechaBaja.Location = new System.Drawing.Point(121, 284);
+            this.DtpFechaBaja.Location = new System.Drawing.Point(115, 241);
             this.DtpFechaBaja.Name = "DtpFechaBaja";
             this.DtpFechaBaja.Size = new System.Drawing.Size(200, 20);
             this.DtpFechaBaja.TabIndex = 7;
             // 
             // DtpFechaAlta
             // 
-            this.DtpFechaAlta.Location = new System.Drawing.Point(121, 249);
+            this.DtpFechaAlta.Location = new System.Drawing.Point(115, 206);
             this.DtpFechaAlta.Name = "DtpFechaAlta";
             this.DtpFechaAlta.Size = new System.Drawing.Size(200, 20);
             this.DtpFechaAlta.TabIndex = 6;
             // 
-            // txtNroDocumento
-            // 
-            this.txtNroDocumento.Location = new System.Drawing.Point(121, 96);
-            this.txtNroDocumento.Name = "txtNroDocumento";
-            this.txtNroDocumento.Size = new System.Drawing.Size(200, 20);
-            this.txtNroDocumento.TabIndex = 2;
-            // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(121, 135);
+            this.txtApellido.Location = new System.Drawing.Point(115, 92);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(200, 20);
             this.txtApellido.TabIndex = 3;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(121, 174);
+            this.txtNombre.Location = new System.Drawing.Point(115, 131);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 4;
-            // 
-            // txtLegajo
-            // 
-            this.txtLegajo.Location = new System.Drawing.Point(121, 12);
-            this.txtLegajo.Name = "txtLegajo";
-            this.txtLegajo.Size = new System.Drawing.Size(200, 20);
-            this.txtLegajo.TabIndex = 0;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress_1);
             // 
             // btn_agregarTipoDoc
             // 
-            this.btn_agregarTipoDoc.Location = new System.Drawing.Point(327, 52);
+            this.btn_agregarTipoDoc.Location = new System.Drawing.Point(321, 9);
             this.btn_agregarTipoDoc.Name = "btn_agregarTipoDoc";
             this.btn_agregarTipoDoc.Size = new System.Drawing.Size(25, 24);
             this.btn_agregarTipoDoc.TabIndex = 38;
@@ -213,7 +194,7 @@
             // 
             // btn_agregarTipoEmp
             // 
-            this.btn_agregarTipoEmp.Location = new System.Drawing.Point(328, 213);
+            this.btn_agregarTipoEmp.Location = new System.Drawing.Point(322, 170);
             this.btn_agregarTipoEmp.Name = "btn_agregarTipoEmp";
             this.btn_agregarTipoEmp.Size = new System.Drawing.Size(24, 21);
             this.btn_agregarTipoEmp.TabIndex = 39;
@@ -226,18 +207,48 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(328, 286);
+            this.checkBox1.Location = new System.Drawing.Point(322, 243);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 40;
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // txtLegajo
+            // 
+            this.txtLegajo.Location = new System.Drawing.Point(115, 302);
+            this.txtLegajo.Name = "txtLegajo";
+            this.txtLegajo.Size = new System.Drawing.Size(200, 20);
+            this.txtLegajo.TabIndex = 43;
+            this.txtLegajo.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 305);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Legajo";
+            this.label1.Visible = false;
+            // 
+            // txtNroDocumento
+            // 
+            this.txtNroDocumento.Location = new System.Drawing.Point(115, 56);
+            this.txtNroDocumento.Mask = "99999999";
+            this.txtNroDocumento.Name = "txtNroDocumento";
+            this.txtNroDocumento.Size = new System.Drawing.Size(200, 20);
+            this.txtNroDocumento.TabIndex = 44;
+            this.txtNroDocumento.ValidatingType = typeof(int);
+            // 
             // EditarEmpleadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 352);
+            this.ClientSize = new System.Drawing.Size(362, 330);
+            this.Controls.Add(this.txtNroDocumento);
+            this.Controls.Add(this.txtLegajo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btn_agregarTipoEmp);
             this.Controls.Add(this.btn_agregarTipoDoc);
@@ -252,13 +263,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.DtpFechaBaja);
             this.Controls.Add(this.DtpFechaAlta);
-            this.Controls.Add(this.txtNroDocumento);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtLegajo);
             this.Name = "EditarEmpleadoForm";
             this.Text = "EditarEmpleadosForm";
             this.Load += new System.EventHandler(this.EditarEmpleadoForm_Load);
@@ -280,15 +288,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker DtpFechaBaja;
         private System.Windows.Forms.DateTimePicker DtpFechaAlta;
-        private System.Windows.Forms.TextBox txtNroDocumento;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.Button btn_agregarTipoDoc;
         private System.Windows.Forms.Button btn_agregarTipoEmp;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.MaskedTextBox txtLegajo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtNroDocumento;
     }
 }

@@ -40,7 +40,7 @@ namespace TP_Maxi_PC.Modelos
 
         public bool ValidarFechaAlta()
         {
-            if (fechaAlta != DateTime.MinValue && fechaAlta < DateTime.Today)
+            if (fechaAlta != DateTime.MinValue && fechaAlta <= DateTime.Today)
                 return true;
             return false;
         }

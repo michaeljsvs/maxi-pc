@@ -38,7 +38,7 @@ namespace TP_Maxi_PC.ABM.Empleados
         //LOAD EDITAR
         private void EditarEmpleadoForm_Load(object sender, EventArgs e)
         {
-            txtLegajo.Text = Convert.ToString(empleado.legajo);
+            //txtLegajo.Text = Convert.ToString(empleado.legajo);
             txtNroDocumento.Text = Convert.ToString(empleado.nroDocumento);
             txtApellido.Text = empleado.apellido;
             txtNombre.Text = empleado.nombre;
@@ -100,7 +100,7 @@ namespace TP_Maxi_PC.ABM.Empleados
             // Agregar validaciones
             var empleado = new Empleado()
             {
-                legajo = int.Parse(txtLegajo.Text),
+                //legajo = int.Parse(txtLegajo.Text),
                 TiposDocumento = new TiposDocumento() { idTipoDocumento = int.Parse(cmbTipoDoc.SelectedValue.ToString()) },
                 nroDocumento = int.Parse(txtNroDocumento.Text),
                 apellido = txtApellido.Text,
@@ -134,6 +134,46 @@ namespace TP_Maxi_PC.ABM.Empleados
             else
             {
                 DtpFechaBaja.Enabled = false;
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+
+        private void txtNombre_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }
