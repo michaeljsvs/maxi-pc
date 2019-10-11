@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.DgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTipoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
@@ -59,6 +51,14 @@
             this.txtLegajo = new System.Windows.Forms.MaskedTextBox();
             this.txtNroDocumento = new System.Windows.Forms.MaskedTextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTipoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,52 +80,12 @@
             this.DgvEmpleados.MultiSelect = false;
             this.DgvEmpleados.Name = "DgvEmpleados";
             this.DgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvEmpleados.Size = new System.Drawing.Size(836, 234);
+            this.DgvEmpleados.Size = new System.Drawing.Size(726, 234);
             this.DgvEmpleados.TabIndex = 11;
-            // 
-            // legajo
-            // 
-            this.legajo.HeaderText = "Legajo";
-            this.legajo.Name = "legajo";
-            // 
-            // tipoDocumento
-            // 
-            this.tipoDocumento.HeaderText = "Tipo Documento";
-            this.tipoDocumento.Name = "tipoDocumento";
-            // 
-            // nroDocumento
-            // 
-            this.nroDocumento.HeaderText = "Nro Documento";
-            this.nroDocumento.Name = "nroDocumento";
-            // 
-            // apellido
-            // 
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            // 
-            // idTipoEmpleado
-            // 
-            this.idTipoEmpleado.HeaderText = "Id Tipo Empleado";
-            this.idTipoEmpleado.Name = "idTipoEmpleado";
-            // 
-            // fechaAlta
-            // 
-            this.fechaAlta.HeaderText = "Fecha Alta";
-            this.fechaAlta.Name = "fechaAlta";
-            // 
-            // fechaBaja
-            // 
-            this.fechaBaja.HeaderText = "Fecha Baja";
-            this.fechaBaja.Name = "fechaBaja";
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(749, 126);
+            this.btnActualizar.Location = new System.Drawing.Point(660, 126);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 10;
@@ -135,7 +95,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(689, 406);
+            this.btnModificar.Location = new System.Drawing.Point(579, 406);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 13;
@@ -145,7 +105,7 @@
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.Location = new System.Drawing.Point(649, 126);
+            this.BtnNuevo.Location = new System.Drawing.Point(660, 96);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(75, 23);
             this.BtnNuevo.TabIndex = 8;
@@ -155,7 +115,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(608, 406);
+            this.btnEliminar.Location = new System.Drawing.Point(498, 406);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 12;
@@ -167,7 +127,7 @@
             // 
             this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(109, 52);
+            this.cmbTipoDoc.Location = new System.Drawing.Point(109, 12);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(200, 21);
             this.cmbTipoDoc.TabIndex = 1;
@@ -175,7 +135,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 96);
+            this.label3.Location = new System.Drawing.Point(12, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 20;
@@ -184,7 +144,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 55);
+            this.label2.Location = new System.Drawing.Point(12, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 19;
@@ -193,11 +153,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(12, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Legajo";
+            this.label1.Visible = false;
             // 
             // cmbTipoEmp
             // 
@@ -259,11 +220,12 @@
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 30;
             this.label8.Text = "Fecha Baja";
+            this.label8.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 135);
+            this.label7.Location = new System.Drawing.Point(12, 95);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 29;
@@ -275,17 +237,18 @@
             this.DtpFechaBaja.Name = "DtpFechaBaja";
             this.DtpFechaBaja.Size = new System.Drawing.Size(200, 20);
             this.DtpFechaBaja.TabIndex = 7;
+            this.DtpFechaBaja.Visible = false;
             // 
             // DtpFechaAlta
             // 
-            this.DtpFechaAlta.Location = new System.Drawing.Point(109, 129);
+            this.DtpFechaAlta.Location = new System.Drawing.Point(109, 89);
             this.DtpFechaAlta.Name = "DtpFechaAlta";
             this.DtpFechaAlta.Size = new System.Drawing.Size(200, 20);
             this.DtpFechaAlta.TabIndex = 6;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(770, 406);
+            this.btnCancelar.Location = new System.Drawing.Point(660, 406);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 9;
@@ -295,16 +258,17 @@
             // 
             // txtLegajo
             // 
-            this.txtLegajo.Location = new System.Drawing.Point(109, 12);
+            this.txtLegajo.Location = new System.Drawing.Point(109, 126);
             this.txtLegajo.Mask = "99999";
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.Size = new System.Drawing.Size(200, 20);
             this.txtLegajo.TabIndex = 0;
             this.txtLegajo.ValidatingType = typeof(int);
+            this.txtLegajo.Visible = false;
             // 
             // txtNroDocumento
             // 
-            this.txtNroDocumento.Location = new System.Drawing.Point(109, 93);
+            this.txtNroDocumento.Location = new System.Drawing.Point(109, 53);
             this.txtNroDocumento.Mask = "99999999";
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.Size = new System.Drawing.Size(200, 20);
@@ -313,7 +277,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(749, 86);
+            this.btnLimpiar.Location = new System.Drawing.Point(9, 406);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 31;
@@ -321,11 +285,52 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // legajo
+            // 
+            this.legajo.HeaderText = "Legajo";
+            this.legajo.Name = "legajo";
+            // 
+            // tipoDocumento
+            // 
+            this.tipoDocumento.HeaderText = "Tipo Documento";
+            this.tipoDocumento.Name = "tipoDocumento";
+            // 
+            // nroDocumento
+            // 
+            this.nroDocumento.HeaderText = "Nro Documento";
+            this.nroDocumento.Name = "nroDocumento";
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // idTipoEmpleado
+            // 
+            this.idTipoEmpleado.HeaderText = "Id Tipo Empleado";
+            this.idTipoEmpleado.Name = "idTipoEmpleado";
+            // 
+            // fechaAlta
+            // 
+            this.fechaAlta.HeaderText = "Fecha Alta";
+            this.fechaAlta.Name = "fechaAlta";
+            // 
+            // fechaBaja
+            // 
+            this.fechaBaja.HeaderText = "Fecha Baja";
+            this.fechaBaja.Name = "fechaBaja";
+            this.fechaBaja.Visible = false;
+            // 
             // EmpleadosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 441);
+            this.ClientSize = new System.Drawing.Size(751, 441);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txtNroDocumento);
             this.Controls.Add(this.txtLegajo);
@@ -362,14 +367,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DgvEmpleados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn legajo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nroDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idTipoEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaBaja;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button BtnNuevo;
@@ -392,5 +389,13 @@
         private System.Windows.Forms.MaskedTextBox txtLegajo;
         private System.Windows.Forms.MaskedTextBox txtNroDocumento;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn legajo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTipoEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaBaja;
     }
 }

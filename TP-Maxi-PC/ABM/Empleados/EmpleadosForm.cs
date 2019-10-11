@@ -174,11 +174,11 @@ namespace TP_Maxi_PC.ABM.Empleados
         //CREA UN OBJETO CON LOS DATOS DEL FORM
         private Empleado PrepararEmpleado()
         {
-            if (String.IsNullOrEmpty(txtLegajo.Text))
-            {
-                MessageBox.Show("Legajo vacio");
-                return null;
-            }
+            //if (String.IsNullOrEmpty(txtLegajo.Text))
+            //{
+            //    MessageBox.Show("Legajo vacio");
+            //    return null;
+            //}
             if (String.IsNullOrEmpty(txtNroDocumento.Text))
             {
                 MessageBox.Show("Nro Documento vacio");
@@ -198,7 +198,7 @@ namespace TP_Maxi_PC.ABM.Empleados
             // Agregar validaciones
             var empleado = new Empleado()
             {
-                legajo = int.Parse(txtLegajo.Text),
+                //legajo = int.Parse(txtLegajo.Text),
                 TiposDocumento = new TiposDocumento() { idTipoDocumento = int.Parse(cmbTipoDoc.SelectedValue.ToString()) },
                 nroDocumento = int.Parse(txtNroDocumento.Text),
                 apellido = txtApellido.Text.Trim(),

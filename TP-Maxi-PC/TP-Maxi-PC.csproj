@@ -200,8 +200,14 @@
     <Compile Include="Helpers\acceso_BD.cs" />
     <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Modelos\Barrio.cs" />
+    <Compile Include="Modelos\Marca.cs" />
+    <Compile Include="Modelos\Modelo.cs" />
+    <Compile Include="Modelos\OrdenesXPc.cs" />
+    <Compile Include="Modelos\OrdenServicio.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\Empleado.cs" />
+    <Compile Include="Modelos\Pc.cs" />
+    <Compile Include="Modelos\TipoPc.cs" />
     <Compile Include="Modelos\TiposDocumento.cs" />
     <Compile Include="Modelos\TiposEmpleado.cs" />
     <Compile Include="Principal.cs">
