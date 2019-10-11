@@ -47,6 +47,7 @@
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnOS = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -200,17 +201,29 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(251, 209);
+            this.label2.Location = new System.Drawing.Point(250, 204);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(318, 32);
+            this.label2.Size = new System.Drawing.Size(322, 32);
             this.label2.TabIndex = 2;
-            this.label2.Text = "ORDENES DE TRABAJO";
+            this.label2.Text = "ORDENES DE SERVICIO";
+            // 
+            // btnOS
+            // 
+            this.btnOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOS.Image = ((System.Drawing.Image)(resources.GetObject("btnOS.Image")));
+            this.btnOS.Location = new System.Drawing.Point(268, 254);
+            this.btnOS.Name = "btnOS";
+            this.btnOS.Size = new System.Drawing.Size(290, 120);
+            this.btnOS.TabIndex = 7;
+            this.btnOS.UseVisualStyleBackColor = true;
+            this.btnOS.Click += new System.EventHandler(this.btnOS_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 399);
+            this.Controls.Add(this.btnOS);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnPc);
@@ -247,6 +260,7 @@
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modelosToolStripMenuItem;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnOS;
     }
 }
 

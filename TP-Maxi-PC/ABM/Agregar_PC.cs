@@ -45,8 +45,6 @@ namespace TP_Maxi_PC
                     pc.ItemArray[5].ToString()
                 };
                 dgv_PC.Rows.Add(fila);
-
-
             }
         }
 

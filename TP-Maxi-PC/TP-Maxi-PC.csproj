@@ -210,6 +210,18 @@
     <Compile Include="Modelos\TipoPc.cs" />
     <Compile Include="Modelos\TiposDocumento.cs" />
     <Compile Include="Modelos\TiposEmpleado.cs" />
+    <Compile Include="OrdenesServicio\CargarOrdenServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesServicio\CargarOrdenServicio.Designer.cs">
+      <DependentUpon>CargarOrdenServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesServicio\Ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesServicio\Ordenes.Designer.cs">
+      <DependentUpon>Ordenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +235,7 @@
     <Compile Include="Repositorios\EmpleadosRepositorio.cs" />
     <Compile Include="Repositorios\MarcasRepositorio.cs" />
     <Compile Include="Repositorios\ModelosRepositorio.cs" />
+    <Compile Include="Repositorios\OrdenesRepositorio.cs" />
     <Compile Include="Repositorios\PCRepositorio.cs" />
     <Compile Include="Repositorios\TiposCompRepositorio.cs" />
     <Compile Include="Repositorios\TiposDocumentoRepositorio.cs" />
@@ -294,6 +307,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ABM\TipoEmpleados\ModificarTiposEmpleados.resx">
       <DependentUpon>ModificarTiposEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesServicio\CargarOrdenServicio.resx">
+      <DependentUpon>CargarOrdenServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesServicio\Ordenes.resx">
+      <DependentUpon>Ordenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

@@ -12,6 +12,7 @@ using TP_Maxi_PC.ABM.Componentes;
 using TP_Maxi_PC.ABM.Empleados;
 using TP_Maxi_PC.ABM.Marcas;
 using TP_Maxi_PC.ABM.Modelos;
+using TP_Maxi_PC.OrdenesServicio;
 
 namespace TP_Maxi_PC
 {
@@ -88,6 +89,12 @@ namespace TP_Maxi_PC
         {
             AgregarModelo nuevo = new AgregarModelo();
             nuevo.Show();
+        }
+
+        private void btnOS_Click(object sender, EventArgs e)
+        {
+            Ordenes nueva = new Ordenes();
+            nueva.ShowDialog();
         }
     }
 }

@@ -355,3 +355,5 @@ C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi08-10\TP-Maxi-PC\obj\Debug\T
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi08-10\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.csproj.CoreCompileInputs.cache
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi08-10\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.exe
 C:\Users\Villanueva\Desktop\Michael\UTN\4to\PAV\Maxi08-10\TP-Maxi-PC\obj\Debug\TP-Maxi-PC.pdb
+C:\Users\Norma\Documents\Repositorios\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.OrdenesServicio.CargarOrdenServicio.resources
+C:\Users\Norma\Documents\Repositorios\maxi-pc\TP-Maxi-PC\obj\Debug\TP_Maxi_PC.OrdenesServicio.Ordenes.resources
