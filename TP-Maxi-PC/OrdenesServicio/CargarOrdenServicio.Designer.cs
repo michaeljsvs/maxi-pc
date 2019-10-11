@@ -205,7 +205,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(159, 9);
+            this.label3.Location = new System.Drawing.Point(201, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(421, 32);
             this.label3.TabIndex = 14;
@@ -249,16 +249,20 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(658, 431);
+            this.maskedTextBox1.Mask = "99999";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox1.TabIndex = 3;
+            this.maskedTextBox1.ValidatingType = typeof(int);
             // 
             // maskedTextBox2
             // 
             this.maskedTextBox2.Location = new System.Drawing.Point(658, 461);
+            this.maskedTextBox2.Mask = "99999";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox2.TabIndex = 4;
+            this.maskedTextBox2.ValidatingType = typeof(int);
             // 
             // button1
             // 
