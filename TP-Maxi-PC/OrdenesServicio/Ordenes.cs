@@ -15,7 +15,7 @@ namespace TP_Maxi_PC.OrdenesServicio
     public partial class Ordenes : Form
     {
         OrdenesRepositorio OSRepo;
-        string entregar;
+        
         public Ordenes()
         {
             OSRepo = new OrdenesRepositorio();
@@ -55,6 +55,7 @@ namespace TP_Maxi_PC.OrdenesServicio
         {
             CargarOrdenServicio nueva = new CargarOrdenServicio();
             nueva.ShowDialog();
+            ActualizarOS();
         }
 
         private void dgvOS_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -72,15 +73,41 @@ namespace TP_Maxi_PC.OrdenesServicio
             else
             {
                 var OSSelec = dgvOS.SelectedRows;
+                string ent = "";
                 foreach (DataGridViewRow fila in OSSelec)
                 {
-                    var entregar = fila.Cells[0].Value.ToString();
+                     ent = fila.Cells[0].Value.ToString();
                 }
-                OSRepo.entregar(entregar);
+                OSRepo.entregar(ent);
                 MessageBox.Show("Se cargo la entrega correctamente!");
                 ActualizarOS();
             }
             
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var OSSelec = dgvOS.SelectedRows;
+            foreach(DataGridViewRow fila in OSSelec)
+            {
+                var eliminar = fila.Cells[0].Value.ToString();
+                var confirmacion = MessageBox.Show("Eliminar Orden de Servicio Nº: "+eliminar+"?", "Confirmar Operación", MessageBoxButtons.YesNo);
+                if (confirmacion.Equals(DialogResult.No))
+                {
+                    return;
+                }
+                else
+                {
+                    OSRepo.eliminarOS(eliminar);
+                    MessageBox.Show("Eliminado Correctamente!");
+                    ActualizarOS();
+                }
+            }
         }
     }
 }

@@ -32,5 +32,10 @@ namespace TP_Maxi_PC.Repositorios
             string sql = "UPDATE [dbo].[OrdenesServicio] SET fechaRealEntrega = '" + DateTime.Today.ToString("yyyy-MM-dd")+ "' WHERE idOrdenServicio =" + id;
             BD.EjecutarSQL(sql);
         }
+        public bool eliminarOS(string id)
+        {
+            string sql = "DELETE [dbo].[OrdenesServicio] WHERE idOrdenServicio = " + id;
+            return BD.EjecutarSQL(sql);
+        }
     }
 }

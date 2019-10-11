@@ -48,6 +48,7 @@
             this.txtLegajo = new System.Windows.Forms.TextBox();
             this.btn_agregarTipoDoc = new System.Windows.Forms.Button();
             this.btn_agregarTipoEmp = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // cmbTipoEmp
@@ -220,11 +221,24 @@
             this.btn_agregarTipoEmp.UseVisualStyleBackColor = true;
             this.btn_agregarTipoEmp.Click += new System.EventHandler(this.btn_agregarTipoEmp_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(328, 286);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 40;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // EditarEmpleadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 352);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btn_agregarTipoEmp);
             this.Controls.Add(this.btn_agregarTipoDoc);
             this.Controls.Add(this.cmbTipoEmp);
@@ -275,5 +289,6 @@
         private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.Button btn_agregarTipoDoc;
         private System.Windows.Forms.Button btn_agregarTipoEmp;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

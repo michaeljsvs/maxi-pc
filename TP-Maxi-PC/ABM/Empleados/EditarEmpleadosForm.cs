@@ -43,7 +43,11 @@ namespace TP_Maxi_PC.ABM.Empleados
             txtApellido.Text = empleado.apellido;
             txtNombre.Text = empleado.nombre;
             DtpFechaAlta.Value = empleado.fechaAlta != DateTime.MinValue ? empleado.fechaAlta : DateTime.Today;
-            DtpFechaBaja.Value = empleado.fechaBaja != DateTime.MinValue ? empleado.fechaBaja : DateTime.Today;
+            if (checkBox1.Checked == true)
+            {
+                DtpFechaBaja.Value = empleado.fechaBaja != DateTime.MinValue ? empleado.fechaBaja : DateTime.Today;
+            }
+            
 
             Utils.CargarCombo(ref cmbTipoDoc, _tipoDocumentoRepositorio.ObtenerTiposDocumentoDT(), "idTipoDocumento", "nombre");
             Utils.CargarCombo(ref cmbTipoEmp, _empleadosRepositorio.ObtenerTipoEmpleado(), "idTipoEmpleado", "nombre");
@@ -119,6 +123,18 @@ namespace TP_Maxi_PC.ABM.Empleados
         {
             AgregarTiposEmpleado nuevo = new AgregarTiposEmpleado();
             nuevo.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked == true)
+            {
+                DtpFechaBaja.Enabled = true;
+            }
+            else
+            {
+                DtpFechaBaja.Enabled = false;
+            }
         }
     }
 }

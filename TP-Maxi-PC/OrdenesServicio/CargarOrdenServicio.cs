@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Maxi_PC.Repositorios;
 using TP_Maxi_PC.Modelos;
+using TP_Maxi_PC.ABM.Empleados;
 
 
 namespace TP_Maxi_PC.OrdenesServicio
@@ -124,6 +125,20 @@ namespace TP_Maxi_PC.OrdenesServicio
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Agregar_PC nueva = new Agregar_PC();
+            nueva.ShowDialog();
+            ActualizarPC();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EmpleadosForm nuevo = new EmpleadosForm();
+            nuevo.ShowDialog();
+            ActualizarEmpleados();
         }
     }
 }

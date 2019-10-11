@@ -39,11 +39,14 @@
             this.idPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNueva = new System.Windows.Forms.Button();
             this.btnEntregar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOS)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOS
             // 
+            this.dgvOS.AllowUserToAddRows = false;
             this.dgvOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idOrdenServicio,
@@ -114,7 +117,7 @@
             // 
             // btnEntregar
             // 
-            this.btnEntregar.Location = new System.Drawing.Point(778, 335);
+            this.btnEntregar.Location = new System.Drawing.Point(13, 334);
             this.btnEntregar.Name = "btnEntregar";
             this.btnEntregar.Size = new System.Drawing.Size(75, 23);
             this.btnEntregar.TabIndex = 2;
@@ -122,11 +125,33 @@
             this.btnEntregar.UseVisualStyleBackColor = true;
             this.btnEntregar.Click += new System.EventHandler(this.btnEntregar_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(778, 334);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(697, 334);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // Ordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 450);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEntregar);
             this.Controls.Add(this.btnNueva);
             this.Controls.Add(this.dgvOS);
@@ -151,5 +176,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn costoTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPC;
         private System.Windows.Forms.Button btnEntregar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

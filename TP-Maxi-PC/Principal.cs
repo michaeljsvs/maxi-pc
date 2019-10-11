@@ -59,15 +59,15 @@ namespace TP_Maxi_PC
         private void btnCliente_Click(object sender, EventArgs e)
         {
             Agregar_Cliente nuevo = new Agregar_Cliente();
-            nuevo.Show();
+            nuevo.ShowDialog();
         }
 
         //EMPLEADOS
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
             EmpleadosForm nuevoEmp = new EmpleadosForm(this);
-            nuevoEmp.Show();
-            this.Hide();
+            nuevoEmp.ShowDialog();
+            
         }
 
         //COMPONENTES

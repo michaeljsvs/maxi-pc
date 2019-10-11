@@ -135,7 +135,7 @@ namespace TP_Maxi_PC.ABM.Empleados
         //BTN CLOSING X
         private void EmpleadosForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _principalForm.Show();
+            //_principalForm.Show();
         }
 
         //BTN MODIFICAR
@@ -205,7 +205,7 @@ namespace TP_Maxi_PC.ABM.Empleados
                 nombre = txtNombre.Text,
                 idTipoEmpleado = new TiposEmpleado() { idTipoEmpleado = int.Parse(cmbTipoEmp.SelectedValue.ToString()) },
                 fechaAlta = DtpFechaAlta.Value.Date,
-                fechaBaja = DtpFechaBaja.Value.Date
+               fechaBaja = DtpFechaBaja.Value.Date
             };
             
             if (!empleado.ValidarApellido())
@@ -223,11 +223,11 @@ namespace TP_Maxi_PC.ABM.Empleados
                 MessageBox.Show("Fecha Alta inválida");
                 return null;
             }
-            if (!empleado.ValidarFechaBaja())
-            {
-                MessageBox.Show("Fecha Baja inválida");
-                return null;
-            }
+            //if (!empleado.ValidarFechaBaja())
+            //{
+            //    MessageBox.Show("Fecha Baja inválida");
+            //    return null;
+            //}
             return empleado;
         }
 

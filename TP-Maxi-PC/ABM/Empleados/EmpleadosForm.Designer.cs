@@ -80,7 +80,7 @@
             this.DgvEmpleados.MultiSelect = false;
             this.DgvEmpleados.Name = "DgvEmpleados";
             this.DgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvEmpleados.Size = new System.Drawing.Size(726, 234);
+            this.DgvEmpleados.Size = new System.Drawing.Size(747, 234);
             this.DgvEmpleados.TabIndex = 11;
             // 
             // btnActualizar
@@ -330,7 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 441);
+            this.ClientSize = new System.Drawing.Size(764, 441);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txtNroDocumento);
             this.Controls.Add(this.txtLegajo);
