@@ -13,6 +13,7 @@ using TP_Maxi_PC.ABM.Empleados;
 using TP_Maxi_PC.ABM.Marcas;
 using TP_Maxi_PC.ABM.Modelos;
 using TP_Maxi_PC.OrdenesServicio;
+using TP_Maxi_PC.Reportes;
 
 namespace TP_Maxi_PC
 {
@@ -94,6 +95,12 @@ namespace TP_Maxi_PC
         private void btnOS_Click(object sender, EventArgs e)
         {
             Ordenes nueva = new Ordenes();
+            nueva.ShowDialog();
+        }
+
+        private void listadoDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaEmpleados nueva = new ListaEmpleados();
             nueva.ShowDialog();
         }
     }

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Empleados" msprop:Generator_TableClassName="EmpleadosDataTable" msprop:Generator_TableVarName="tableEmpleados" msprop:Generator_TablePropName="Empleados" msprop:Generator_RowDeletingName="EmpleadosRowDeleting" msprop:Generator_RowChangingName="EmpleadosRowChanging" msprop:Generator_RowEvHandlerName="EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadosRowDeleted" msprop:Generator_UserTableName="Empleados" msprop:Generator_RowChangedName="EmpleadosRowChanged" msprop:Generator_RowEvArgName="EmpleadosRowChangeEvent" msprop:Generator_RowClassName="EmpleadosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="legajo" msprop:Generator_ColumnVarNameInTable="columnlegajo" msprop:Generator_ColumnPropNameInRow="legajo" msprop:Generator_ColumnPropNameInTable="legajoColumn" msprop:Generator_UserColumnName="legajo" type="xs:string" minOccurs="0" />
+              <xs:element name="tipoDoc" msprop:Generator_ColumnVarNameInTable="columntipoDoc" msprop:Generator_ColumnPropNameInRow="tipoDoc" msprop:Generator_ColumnPropNameInTable="tipoDocColumn" msprop:Generator_UserColumnName="tipoDoc" type="xs:string" minOccurs="0" />
+              <xs:element name="nroDoc" msprop:Generator_ColumnVarNameInTable="columnnroDoc" msprop:Generator_ColumnPropNameInRow="nroDoc" msprop:Generator_ColumnPropNameInTable="nroDocColumn" msprop:Generator_UserColumnName="nroDoc" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="tipoEmpleado" msprop:Generator_ColumnVarNameInTable="columntipoEmpleado" msprop:Generator_ColumnPropNameInRow="tipoEmpleado" msprop:Generator_ColumnPropNameInTable="tipoEmpleadoColumn" msprop:Generator_UserColumnName="tipoEmpleado" type="xs:string" minOccurs="0" />
+              <xs:element name="fechaAlta" msprop:Generator_ColumnVarNameInTable="columnfechaAlta" msprop:Generator_ColumnPropNameInRow="fechaAlta" msprop:Generator_ColumnPropNameInTable="fechaAltaColumn" msprop:Generator_UserColumnName="fechaAlta" type="xs:string" minOccurs="0" />
+              <xs:element name="fechaBaja" msprop:Generator_ColumnVarNameInTable="columnfechaBaja" msprop:Generator_ColumnPropNameInRow="fechaBaja" msprop:Generator_ColumnPropNameInTable="fechaBajaColumn" msprop:Generator_UserColumnName="fechaBaja" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

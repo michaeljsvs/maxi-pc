@@ -48,6 +48,8 @@
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnOS = new System.Windows.Forms.Button();
+            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +57,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
-            this.administrarToolStripMenuItem});
+            this.administrarToolStripMenuItem,
+            this.informesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(828, 24);
@@ -97,7 +100,7 @@
             this.marcasToolStripMenuItem,
             this.modelosToolStripMenuItem});
             this.pCToolStripMenuItem.Name = "pCToolStripMenuItem";
-            this.pCToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
+            this.pCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pCToolStripMenuItem.Text = "PC";
             // 
             // agregarToolStripMenuItem
@@ -218,6 +221,21 @@
             this.btnOS.UseVisualStyleBackColor = true;
             this.btnOS.Click += new System.EventHandler(this.btnOS_Click);
             // 
+            // informesToolStripMenuItem
+            // 
+            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadoDeEmpleadosToolStripMenuItem});
+            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.informesToolStripMenuItem.Text = "Informes";
+            // 
+            // listadoDeEmpleadosToolStripMenuItem
+            // 
+            this.listadoDeEmpleadosToolStripMenuItem.Name = "listadoDeEmpleadosToolStripMenuItem";
+            this.listadoDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.listadoDeEmpleadosToolStripMenuItem.Text = "Listado de empleados";
+            this.listadoDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeEmpleadosToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +279,8 @@
         private System.Windows.Forms.ToolStripMenuItem modelosToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnOS;
+        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeEmpleadosToolStripMenuItem;
     }
 }
 
